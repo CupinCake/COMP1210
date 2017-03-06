@@ -3,18 +3,21 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
-*/
+ @author perry bunn
+ @version 3/6/17
+ */
 public class DodecahedronListMenuApp {
    /**
-   */
+    *
+    * @param args not used
+    * @throws IOException in case a file is not found
+    */
    public static void main(String[] args) throws IOException {
       
       String listName = "*** no list name assigned ***";
       ArrayList<Dodecahedron> dodObj = new ArrayList<Dodecahedron>();
       DodecahedronList dodObjList = new DodecahedronList(listName, dodObj);
       String fileName = "no file Name";
-      // create/declare ArrayList Dodecahedron Objects
-      // create/declare ArrarList DodecahedronList Objects using list name and ArratList as params in the constructor
       
       String userInput = "";
       Scanner scanInput = new Scanner(System.in);
@@ -51,12 +54,13 @@ public class DodecahedronListMenuApp {
                fileName = scanInput.nextLine();
                
                dodObjList = dodObjList.readFile(fileName);
-               System.out.println("\tFile read in and Dodecahedron List created\n");
+               System.out.println("\tFile read in and Dodecahedron "
+                                                   + "List created\n");
                
                break;
                
             case 'P':
-               System.out.println(dodObjList);
+               System.out.println(dodObjList.toString());
                break;
                
             case 'S':
@@ -93,7 +97,8 @@ public class DodecahedronListMenuApp {
                label = scanInput.nextLine();
                
                if (dodObjList.findDodecahedron(label) != null) {
-                  System.out.println(dodObjList.findDodecahedron(label).toString() + "/n");
+                  System.out.println(dodObjList.findDodecahedron(label)
+                                                      .toString() + "\n");
                } else {
                   System.out.println("\t\"" + label + "\" not found\n");
                }
@@ -109,9 +114,9 @@ public class DodecahedronListMenuApp {
                
                if (dodObjList.findDodecahedron(label) != null) {
                   dodObjList.editDodecahedron(label, color, edge);
-                  System.out.println("\"" + label + "\" successfully edited");
+                  System.out.println("\"" + label + "\" successfully edited\n");
                } else {
-                  System.out.println("\"" + label + "\" not found");
+                  System.out.println("\"" + label + "\" not found\n");
                }
                break;
                

@@ -96,13 +96,13 @@ public class DodecahedronList {
    @return returns the obj atributes
    */
    public String toString() {
-      String finalString = "";
+      String result = "\n" + listName + "\n";
       int index = 0;
       while (index < dodObjList.size()) {
-         finalString = "\n" + dodObjList.get(index).toString() + "\n";
+         result += "\n" + dodObjList.get(index).toString() + "\n";
          index++;
       }
-      return "\n" + listName + "\n" + finalString;
+      return result;
    }
    /**
    @return returns the summary of the array
@@ -118,13 +118,25 @@ public class DodecahedronList {
             + "Average Surface/Volume Ratio: "
             + fmt.format(averageSurfaceToVolumeRatio());
    }
-   
+
+   //-------------------------------------------------------------------------//
    // Project 6 below
-   
-   public ArrayList getList() {
+   //-------------------------------------------------------------------------//
+
+   /**
+    *
+    * @return returns the Dodecahedron list
+    */
+   public ArrayList<Dodecahedron> getList() {
       return dodObjList;
    }
-   
+
+   /**
+    *
+    * @param fileNameIn takes a file name in to look for
+    * @return returns the list generated from the file
+    * @throws IOException incase the file is not found
+    */
    public DodecahedronList readFile(String fileNameIn) throws IOException {
       Scanner scanFile = new Scanner(new File(fileNameIn));
       ArrayList<Dodecahedron> dodObjList = new ArrayList<Dodecahedron>();
@@ -143,15 +155,27 @@ public class DodecahedronList {
          dodObjList.add(dodObj);
       }
       
-      DodecahedronList dodList = new DodecahedronList(dodObjListName, dodObjList);
+      DodecahedronList dodList = new DodecahedronList(dodObjListName,
+                                                          dodObjList);
       return dodList;
    }
-   
+
+   /**
+    *
+    * @param labelIn takes input for label in the constructor.
+    * @param colorIn takes input for color in the constructor.
+    * @param edgeIn takes input for the edge in the constructor.
+    */
    public void addDodecahedron(String labelIn, String colorIn, double edgeIn) {
       Dodecahedron dodObj = new Dodecahedron(labelIn, colorIn, edgeIn);
       dodObjList.add(dodObj);
    }
-   
+
+   /**
+    *
+    * @param labelIn takes the label to find in the arraylist
+    * @return returns the object found in the arraylist
+    */
    public Dodecahedron findDodecahedron(String labelIn) {
       for (Dodecahedron dodObj : dodObjList) {
          if (dodObj.getLabel().equalsIgnoreCase(labelIn)) {
@@ -160,19 +184,32 @@ public class DodecahedronList {
       }
       return null;
    }
-   
+
+   /**
+    *
+    * @param labelIn takes the label to delete from the arraylist
+    * @return returns the object deleted
+    */
    public Dodecahedron deleteDodecahedron(String labelIn) {
       int index = dodObjList.indexOf(findDodecahedron(labelIn));
       
       if (index >= 0) {
-         dodObjList.remove(index);
-         return dodObjList.get(index);
+         return dodObjList.remove(index);
       } else {
          return null;
       }
    }
-   
-   public boolean editDodecahedron(String labelIn, String colorIn, double edgeIn) {
+
+   /**
+    *
+    *
+    * @param labelIn takes input for label to find in the arraylist.
+    * @param colorIn takes input for color in the constructor.
+    * @param edgeIn takes input for the edge in the constructor.
+    * @return returns if the edit was successful
+    */
+   public boolean editDodecahedron(String labelIn, String colorIn, 
+                                                   double edgeIn) {
       boolean result = false;
       for (Dodecahedron dodObj : dodObjList) {
          if (dodObj.getLabel().equals(labelIn)) {
