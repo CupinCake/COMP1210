@@ -96,7 +96,7 @@ public class DodecahedronList {
    @return returns the obj atributes
    */
    public String toString() {
-      String result = "\n" + listName + "\n";
+      String result = listName + "\n";
       int index = 0;
       while (index < dodObjList.size()) {
          result += "\n" + dodObjList.get(index).toString() + "\n";
@@ -139,7 +139,7 @@ public class DodecahedronList {
     */
    public DodecahedronList readFile(String fileNameIn) throws IOException {
       Scanner scanFile = new Scanner(new File(fileNameIn));
-      ArrayList<Dodecahedron> dodObjList = new ArrayList<Dodecahedron>();
+      ArrayList<Dodecahedron> dodObjList2 = new ArrayList<Dodecahedron>();
       String dodObjListName = "";
       String label = "";
       String color = "";

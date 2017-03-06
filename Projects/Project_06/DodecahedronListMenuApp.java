@@ -26,8 +26,8 @@ public class DodecahedronListMenuApp {
                        + "R - Read File and Create Dodecahedron List\n"
                        + "P - Print Dodecahedron List\n" 
                        + "S - Print Summary\n"
-                       + "A - Add Dodecahedron Object\n"   
-                       + "D - Delete Triangle Object\n"   
+                       + "A - Add Dodecahedron\n"   
+                       + "D - Delete Dodecahedron\n"   
                        + "F - Find Dodecahedron\n"
                        + "E - Edit Dodecahedron\n"
                        + "Q - Quit");
@@ -124,7 +124,7 @@ public class DodecahedronListMenuApp {
                break;
             
             default:
-               // loop again;
+               System.out.println("\t*** invalid code ***\n");
          }
       } while (!userInput.equalsIgnoreCase("Q"));
    }
