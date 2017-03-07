@@ -5,6 +5,7 @@ font-family: 'Source Code Pro', monospace;
 */
 body {
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     font-size: 1.3vw;
     color: black;
 }
@@ -38,4 +39,11 @@ a:hover {
 
 .imageSize {
     max-width: 25vh;
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid;
+    border-color: black;
 }
