@@ -11,10 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-div {
-    overflow-x: hidden;
-}
-
 .code {
     font-family: 'Source Code Pro', monospace;
     background-color: #d3d3d3;
