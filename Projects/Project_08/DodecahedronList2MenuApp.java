@@ -15,8 +15,8 @@ public class DodecahedronList2MenuApp {
    public static void main(String[] args) throws IOException {
       
       String listName = "*** no list name assigned ***";
-      ArrayList<Dodecahedron> dodObj = new ArrayList<Dodecahedron>();
-      DodecahedronList dodObjList = new DodecahedronList(listName, dodObj);
+      Dodecahedron[] dodObj = new Dodecahedron[20];
+      DodecahedronList2 dodObjList = new DodecahedronList2(listName, dodObj, 0);
       String fileName = "no file Name";
       
       String userInput = "";
@@ -38,7 +38,6 @@ public class DodecahedronList2MenuApp {
          String label = "";
          String color = "";
          double edge = 0;
-         int index;
          
          userInput = scanInput.nextLine();
          if (userInput.length() == 0) {

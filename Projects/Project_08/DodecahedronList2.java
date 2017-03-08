@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 import java.io.IOException;
@@ -10,14 +9,16 @@ import java.io.File;
 public class DodecahedronList2 {
    private String listName;
    private Dodecahedron[] dodObjList;
-   private int arrSize =  dodObjList.length;
+   private int arrSize;
    /**
-   @param listNameIn input for the listName
-   @param dodObjListIn input for the dodObjList
-   */
-   public DodecahedronList2(String listNameIn, Dodecahedron[] dodObjListIn) {
+    * @param listNameIn input for the listName
+    * @param dodObjListIn input for the dodObjList
+    * @param arrSizeIn
+    */
+   public DodecahedronList2(String listNameIn, Dodecahedron[] dodObjListIn, int arrSizeIn) {
       listName = listNameIn;
       dodObjList = dodObjListIn;
+      arrSize = arrSizeIn;
    }
    /**
    @return returns the name of the list
@@ -36,7 +37,7 @@ public class DodecahedronList2 {
    */
    public double totalSurfaceArea() {
       double total = 0;
-      for (int i = 0; i < dodObjList.length; i++) {
+      for (int i = 0; i < arrSize; i++) {
          total += dodObjList[i].surfaceArea();
       }
       /*
@@ -53,7 +54,7 @@ public class DodecahedronList2 {
    */
    public double totalVolume() {
       double total = 0;
-      for (int i = 0; i < dodObjList.length; i++) {
+      for (int i = 0; i < arrSize; i++) {
          total += dodObjList[i].volume();
       }
       return total;
@@ -63,7 +64,7 @@ public class DodecahedronList2 {
    */
    public double averageSurfaceArea() {
       double total = 0;
-      for (int i = 0; i < dodObjList.length; i++) {
+      for (int i = 0; i < arrSize; i++) {
          total += (dodObjList[i].surfaceArea()) / dodObjList.length;
       }
       return total;
@@ -73,7 +74,7 @@ public class DodecahedronList2 {
    */
    public double averageVolume() {
       double total = 0;
-      for (int i = 0; i < dodObjList.length; i++) {
+      for (int i = 0; i < arrSize; i++) {
          total += (dodObjList[i].volume()) / dodObjList.length;
       }
       return total;
@@ -83,7 +84,7 @@ public class DodecahedronList2 {
    */
    public double averageSurfaceToVolumeRatio() {
       double total = 0;
-      for (int i = 0; i < dodObjList.length; i++) {
+      for (int i = 0; i < arrSize; i++) {
          total += dodObjList[i].surfaceToVolumeRatio() 
                                           / dodObjList.length;
       }
@@ -94,7 +95,7 @@ public class DodecahedronList2 {
    */
    public String toString() {
       String result = listName + "\n";
-      for (int i = 0; i < dodObjList.length; i++) {
+      for (int i = 0; i < arrSize; i++) {
          result += "\n" + dodObjList[i].toString() + "\n";
       }
       return result;
@@ -105,7 +106,7 @@ public class DodecahedronList2 {
    public String summaryInfo() {
       DecimalFormat fmt = new DecimalFormat("#,##0.0##");
       return "----- Summary for " + listName + " -----\n"
-            + "Number of Dodecahedrons: " + dodObjList.length + "\n"
+            + "Number of Dodecahedrons: " + arrSize + "\n"
             + "Total Surface Area: " + fmt.format(totalSurfaceArea()) + "\n"
             + "Total Volume: " + fmt.format(totalVolume()) + "\n"
             + "Average Surface Area: " + fmt.format(averageSurfaceArea()) + "\n"
@@ -147,15 +148,12 @@ public class DodecahedronList2 {
          edge = Double.parseDouble(scanFile.nextLine());
          
          Dodecahedron dodObj = new Dodecahedron(label, color, edge);
-         for (int i = 0; i < dodObjList2.length; i++) {
-            if (dodObjList2[i] == null) {
-               dodObjList2[i] = dodObj;
-            }
-         }
+         dodObjList[arrSize] = dodObj;
+         arrSize++;
       }
       
       DodecahedronList2 dodList = new DodecahedronList2(dodObjListName,
-                                                          dodObjList);
+                                                          dodObjList, arrSize);
       return dodList;
    }
 
@@ -167,11 +165,8 @@ public class DodecahedronList2 {
     */
    public void addDodecahedron(String labelIn, String colorIn, double edgeIn) {
       Dodecahedron dodObj = new Dodecahedron(labelIn, colorIn, edgeIn);
-      for (int i = 0; i < dodObjList.length; i++) {
-            if (dodObjList[i] == null) {
-               dodObjList[i] = dodObj;
-            }
-         }
+      dodObjList[arrSize] = dodObj;
+      arrSize++;
    }
 
    /**
@@ -194,13 +189,19 @@ public class DodecahedronList2 {
     * @return returns the object deleted
     */
    public Dodecahedron deleteDodecahedron(String labelIn) {
-      int index = dodObjList.asList.indexOf(findDodecahedron(labelIn));
-      
-      if (index >= 0) {
-         return dodObjList.remove(index);
-      } else {
-         return null;
+      Dodecahedron dodObjCopy = null;
+      for (int i = 0; i < arrSize; i++) {
+         if (dodObjList[i].getLabel() == labelIn) {
+            dodObjCopy = dodObjList[i];
+            for (int j = i; j < arrSize - 1; j++) {
+               dodObjList[j] = dodObjList[j + 1];
+            }
+            dodObjList[arrSize - 1] = null;
+            arrSize--;
+            return dodObjList[i];
+         }
       }
+      return dodObjCopy;
    }
 
    /**
