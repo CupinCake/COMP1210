@@ -220,6 +220,13 @@
                                 <li><h4>averageVolume:</h4> Returns a double representing the average volume for all Dodecahedron objects in the list.</li>
                                 <li><h4>averageSurfaceToVolumeRatio:</h4> Returns a double representing the average surface to volume ratio for all Dodecahedron objects in the list.</li>
                                 <li><h4>toString:</h4> Returns a String (does not begin with \n) containing the name of the list followed by each Dodecahedron in the list. In the process of creating the return result, this toString() method should include a while loop that calls the toString() method for each Dodecahedron object in the list (adding a \n before and after each).</li>
+                                <li><h4>summaryInfo:</h4> Returns a String (does not begin with \n) containing the name of the list followed by various summary items: number of Dodecahedrons, total surface area, total volume, average surface area, average volume, and average surface to volume ratio. Use "#,##0.0##" as the pattern to format the double values.</li>
+                                <li><h4>getList:</h4> Returns the array of Dodecahedron objects.</li>
+                                <li><h4>readFile:</h4> Takes a String parameter representing the file name, reads in the file, storing the list name and creating an array of Dodecahedron objects, uses the list name, the array, and number of Dodecahedron objects in the array to create a DodecahedronList2 object, and then returns the DodecahedronList2 object.</li>
+                                <li><h4>addDodecahedron:</h4> Returns nothing but takes three parameters label, color, and edge. creates a new Dodecahedron object, and adds it to the DodecahedronList2 object.</li>
+                                <li><h4>findDodecahedron:</h4> Takes a label of a Dodecahedron as the String parameter and returns the corresponding Dodecahedron object if found in the DodecahedronList2 object else returns null. <u>Case should be ignored when attempting to match the label.</u></li>
+                                <li><h4>deleteDodecahedron:</h4> Takes a String as a parameter that represents the label of the Dodecahedron and returns the Dodecahedron if it is found in the DodecahedronList2 object and deleted else returns null. <u>consider using findDodecahedron</u></li>
+                                <li><h4>editDodecahedron:</h4> Takes three parameters label, color, and edge. uses the label to find the corresponding the Dodecahedron object in the list. If found, sets the color and edge to the values passed in as parameters, and returns true. if not found returns false</li>
                             </ul>
                         </li>
                     </ol>
@@ -227,9 +234,9 @@
                 <div class="col-md-10 col-md-offset-1">
                     <h4>DodecahedronList2MenuApp.java</h4>
                     <h5>Requirements:</h5>
-                    <p></p>
+                    <p>Create a DodecahedronList2MenuApp class with a main method that presents the user with a menu with eight options. read input from a file, print report, print summary, add a Dodecahedron object to the DodecahedronList object, delete a Dodecahedron object from the DodecahedronList object, find a Dodecahedron object in the DodecahedronList object, Edit a Dodecahedron in the DodecahedronList object, and quit the program</p>
                     <h5>Design:</h5>
-                    <p></p>
+                    <p>The main method should print a list of options with the action code and a short description followed by a line with just the action codes prompting the user to select an action. After the user enters an action code, the action is performed. Then the line with just the action codes prompting the user to select an action is printed again to accept the next code. The user may continue to perform actions until ‘Q’ is entered to quit the program. Your program should accept both uppercase and lowercase action codes.</p>
                 </div>
                 <div class="col-md-10 col-md-offset-1">
                     <h4>Explanation</h4>
