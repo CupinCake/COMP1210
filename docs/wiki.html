@@ -45,8 +45,36 @@
                 <div class="col-md-4 col-md-offset-4">
                     <h3 class="center">FAQ</h3>
                 </div>
-                <div class="col-md-10 col-md-offset-1">
-                    <p>This is just a place holder as of right now but please feel free to write something, whether its a question you have an answer to a question or even just some tips that you think can benifit someone else, send it to me!</p>
+                <div class="col-md-10 col-md-offset-1" id="arrVsArrL">
+                    <hr>
+                    <h3>Array vs ArrayList</h3>
+                    <p>in Java there are two ways to create an 'array'. Arrays are simple fixed sized arrays.</p>
+                    <div class="code">
+                        // Array Example<br>
+                        int[] name = new int[size];
+                    </div>
+                    <p>ArrayList are dynamic sized arrays that implement list interface.</p>
+                    <div class="code">
+                        // ArrayList Example<br>
+                        ArrayList&lt;Type&gt; name = new ArrayList&lt;Type&gt;();
+                    </div>
+                    <p>An Array is a fixed size data structure while ArrayList is not. you dont need to mention the size of an ArrayList when creating its object. even if you do specify an initial capasity you can always add more to the ArrayList. for example:</p>
+                    <div class="code">
+                        // Array<br>
+                        int[] arr = new int[3]; // the array size is fixed at 3 objects.<br>
+                        arr[0] = 1;<br>
+                        arr[1] = 2;<br>
+                        arr[2] = 3; // we cant add anymore objects to the array without getting a NullPointerExeption<br>
+                        <br>
+                        // ArrayList<br>
+                        ArrayList&lt;Integer&gt; arrL = new ArrayList&lt;Integer&gt;();<br>
+                        arrL.add(1);<br>
+                        arrL.add(2);<br>
+                        arrL.add(3);<br>
+                        arrL.add(4);<br>
+                        // we can add as many elements as we want essentially
+                    </div>
+                    <p>Arrays can contain both primitive data types aswell as objects of a class. however ArrayList only allows objects, not primitive data types.</p>
                 </div>
             </div>
             <div class="row">

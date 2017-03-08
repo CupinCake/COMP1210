@@ -15,6 +15,12 @@
         <title>COMP 1210</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Source+Code+Pro" rel="stylesheet">
     </head>
+    
+<!-- create download links using the a tag -->
+<!-- 
+    <a href="file to download" download>Click here to download</a> 
+-->
+    
     <body>
         <div class="container-fluid">
             <div class="row">
@@ -36,26 +42,209 @@
                     </div>
                 </div>
             </div>
+            
+            
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 center">
-                    <h1>Notes</h1>
+                    <h1>Examples</h1>
                 </div>
             </div>
+            
+            
             <div class="row">
+                <div class="nav">
+                    <div class="col-sm-1 center">
+                        <a href="">Project1</a>
+                    </div>
+                    <div class="col-sm-1 center">
+                        <a href="">Project 2</a>
+                    </div>
+                    <div class="col-sm-1 center">
+                        <a href="">Project 3</a>
+                    </div>
+                    <div class="col-sm-1 center">
+                        <a href="">Project 4</a>
+                    </div>
+                    <div class="col-sm-1 center">
+                        <a href="">Project 5</a>
+                    </div>
+                    <div class="col-sm-1 center">
+                        <a href="#project6">Project 6</a>
+                    </div>
+                    <div class="col-sm-1 center">
+                        <a href="#project8">Project 8</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" id="project6">
+                <div class="col-md-10 col-md-offset-1">
+                    <hr>
+                </div>
                 <div class="col-md-4 col-md-offset-4">
-                    <h3 class="center">Place Holder</h3>
+                    <h3 class="center">Project 6</h3>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <h4>Description</h4>
+                    <p>Write a program that is composed of three classes: Dodecahedron, DodecahedronList, and DodecahedronListMenuApp. DodecahedronListMenuApp presents a menu to the user with eight options and implements them. the program needs to read input from a file (which creates a DodecahedronList object), print report, print summary, add a Dodecahedron object to the DodecahedronList object, delete a Dodecahedron object from the DodecahedronList object, find a Dodecahedron object in the DodecahedronList object, Edit a Dodecahedron in the DodecahedronList object, and quit the program.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-0">
+                        <h4>Dowloads</h4>
+                        <ul>
+                            <li><a href="Projects\Project_06\Example\Example.zip" download>Project 6 Example</a></li>
+                            <li><a href="Projects\Project_06\Project_06.pdf" download>Project 6 Pdf</a> - original document</li>
+                            <li><a href="Notes\06_More_Conditonals_and_Loops.pdf" download>Class notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 col-md-offset-0">
+                        <h4>Links</h4>
+                        <div></div>
+                        <div class="col-md-3 col-md-offset-0">
+                            <a href="https://docs.oracle.com/javase/8/docs/api/">
+                                <img class="imageSize img-circle" src="images/Java.svg" alt="Java 8 Doc Website">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-md-offset-0">
+                            <a href="https://github.com/perryBunn/COMP1210">
+                                <img class="imageSize" src="images/github.svg" alt="Github">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-md-offset-0">
+                            <a href="http://stackoverflow.com/">
+                                <img class="imageSize img-circle" src="images/stackExchange.svg" alt="Stack Exchange">
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-10 col-md-offset-1">
-                    <p>This is just a place holder as of right now. I will update this page with the example files that are gone through in class and explain the classes, methods here.</p>
+                    <h4>Dodecahedron.java</h4>
+                    <p>Assuming that you successfully created this class in Project 4, just copy the file to your new Project 6 folder and go on to DodecahedronList.java</p>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <h4>DodecahedronList.java</h4>
+                    <p>Assuming that you successfully created this class in Project 5, just copy DodecahedronList.java to your new Project 6 folder. DodecahedronList is extended from Project 5 by adding six new methods.</p>
+                    <ul>
+                        <li><h4>getList:</h4> Returns the ArrayList of Dodecahedron objects.</li>
+                        <li><h4>readFile:</h4> Takes a String parameter representing the file name, reads in the file stores the list name and creates an ArrayList of Dodecahedron objects, then uses the list name and the ArrayList to create a DodecahedronList object and return it.</li>
+                        <li><h4>addDodecahedron:</h4> Returns nothing but takes three parameters label, color, and edge. creates a new Dodecahedron object, and adds it to the DodecahedronList object</li>
+                        <li><h4>findDodecahedron:</h4> Takes a label of a Dodecahedron as the String parameter and returns the corresponding Dodecahedron object if found in the DodecahedronList; otherwise returns null. <u>Case should be ignored when attempting to match the label</u>.</li>
+                        <li><h4>deleteDodecahedron:</h4> Takes a String as a parameter that represents the label of the Dodecahedron and returns the Dodecahedron if it is found in the DodecahedronList object and deleted; otherwise returns null. <u>Case should be ignored when attempting to match the label.</u> consider using the findDodecahedron method.</li>
+                        <li><h4>editDodecahedron:</h4> Takes three parameters label, color, and edge. Uses the label to find the corresponding the Dodecahedron object. If found, sets the color and edge to the values passed in as parameters, and returns true else returns false</li>
+                    </ul>
+                    <p>Remember to import java.util.ArrayList, java.util.Scanner, java.io.File, java.io.IOException.</p>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <h4>DodecahedronListMenuApp.java</h4>
+                    <h5>Requirements:</h5>
+                    <p>Create a DodecahedronListMenuApp class with a main method that presents the user with a menu with eight options. read input from a file, print report, print summary, add a Dodecahedron object to the DodecahedronList object, delete a Dodecahedron object from the DodecahedronList object, find a Dodecahedron object in the DodecahedronList object, Edit a Dodecahedron in the DodecahedronList object, and quit the program</p>
+                    <h5>Design:</h5>
+                    <p>The main method should print a list of options with the action code and a short description followed by a line with just the action codes prompting the user to select an action. After the user enters an action code, the action is performed. Then the line with just the action codes prompting the user to select an action is printed again to accept the next code. The user may continue to perform actions until ‘Q’ is entered to quit the program. Your program should accept both uppercase and lowercase action codes.</p>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <h4>Explanation</h4>
+                    <p></p>
                 </div>
             </div>
-            <!-- create download links using the a tag -->
-            <!-- 
-                <a href="file to download" download>Click here to download</a> 
-            -->
-            <div class="row">
-                <p></p>
+            
+            <div class="row" id="project8">
+                <div class="col-md-10 col-md-offset-1">
+                    <hr>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <h3 class="center">Project 8</h3>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <h4>Description</h4>
+                    <p><u>The objective is to modify your Project 6 to use arrays instead of ArrayList objects.</u> Write a program that is composed of three classes: Dodecahedron, DodecahedronList2, and DodecahedronList2MenuApp. DodecahedronListMenuApp presents a menu to the user with eight options and implements them. the program needs to read input from a file (which creates a DodecahedronList object), print report, print summary, add a Dodecahedron object to the DodecahedronList object, delete a Dodecahedron object from the DodecahedronList object, find a Dodecahedron object in the DodecahedronList object, Edit a Dodecahedron in the DodecahedronList object, and quit the program.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-0">
+                        <h4>Dowloads</h4>
+                        <ul>
+                            <li><a href="Projects\Project_08\Example\Example.zip" download>Project 8 Example</a></li>
+                            <li><a href="Projects\Project_08\Project_08.pdf" download>Project 8 Pdf</a> - original document</li>
+                            <li><a href="Notes\08_Arrays.pdf" download>Class notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 col-md-offset-0">
+                        <h4>Links</h4>
+                        <div></div>
+                        <div class="col-md-3 col-md-offset-0">
+                            <a href="https://docs.oracle.com/javase/8/docs/api/">
+                                <img class="imageSize img-circle" src="images/Java.svg" alt="Java 8 Doc Website">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-md-offset-0">
+                            <a href="https://github.com/perryBunn/COMP1210">
+                                <img class="imageSize" src="images/github.svg" alt="Github">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-md-offset-0">
+                            <a href="http://stackoverflow.com/">
+                                <img class="imageSize img-circle" src="images/stackExchange.svg" alt="Stack Exchange">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <h4>Dodecahedron.java</h4>
+                    <p>Assuming that you successfully created this class in Project 4, 5, or 6 just copy the file to your new Project 8 folder and go on to DodecahedronList2.java</p>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <h4>DodecahedronList2.java</h4>
+                    <p><u>You must use arrays instead of ArrayList objects.</u> Assuming that you successfully created this class in Project 6, just copy DodecahedronList.java to your new Project 8 folder and then open in jGRASP and rename as DodecahedronList2.</p>
+                    <h5>Requirements:</h5>
+                    <p>Create a DodecahedronList2 class that stores the name of the list and an array of Dodecahedron objects. It includes methods that return the name of the list, number of Dodecahedron objects in the DodecahedronList2, total surface area, total volume, average surface area, average volume, and average surface to volume ratio for all Dodecahedron objects in the DodecahedronList2. The toString method returns a String containing the name of the list followed by each Dodecahedron in the array, and a summaryInfo method returns summary information about the list.</p>
+                    <h5>Design:</h5>
+                    <p>The DodecahedronList2 class has three fields, a constructor, and methods as outlined below</p>
+                    <ol>
+                        <li>
+                            <h5>Fields</h5>
+                            a String representing the name of the list.
+                            An array of Dodecahedron objects.
+                            an int representing the number of elements in the array of Dodecahedron objects.
+                        </li>
+                        <li>
+                            <h5>Constructor</h5>
+                            Your DodecahedronList2 class must contain a constructor that accepts a parameter of type String representing the name of the list, a parameter of type Dodecahedron[ ], and a parameter of type int representing the number of elements in the Dodecahedron array.
+                        </li>
+                        <li>
+                            <h5>Methods</h5>
+                            <ul>
+                                <li><h4>getName:</h4> Returns a String representing the name of the list.</li>
+                                <li><h4>numberOfDodecahedrons:</h4> Returns an int representing the number of Dodecahedron objects in the DodecahedronList2.</li>
+                                <li><h4>totalSurfaceArea:</h4> Returns a double representing the total surface areas for all Dodecahedron objects in the list.</li>
+                                <li><h4>totalVolume:</h4> Returns a double representing the total volumes for all Dodecahedron objects in the list.</li>
+                                <li><h4>averageSurfaceArea:</h4> Returns a double representing the average surface area for all Dodecahedron objects in the list.</li>
+                                <li><h4>averageVolume:</h4> Returns a double representing the average volume for all Dodecahedron objects in the list.</li>
+                                <li><h4>averageSurfaceToVolumeRatio:</h4> Returns a double representing the average surface to volume ratio for all Dodecahedron objects in the list.</li>
+                                <li><h4>toString:</h4> Returns a String (does not begin with \n) containing the name of the list followed by each Dodecahedron in the list. In the process of creating the return result, this toString() method should include a while loop that calls the toString() method for each Dodecahedron object in the list (adding a \n before and after each).</li>
+                                <li><h4>summaryInfo:</h4> Returns a String (does not begin with \n) containing the name of the list followed by various summary items: number of Dodecahedrons, total surface area, total volume, average surface area, average volume, and average surface to volume ratio. Use "#,##0.0##" as the pattern to format the double values.</li>
+                                <li><h4>getList:</h4> Returns the array of Dodecahedron objects.</li>
+                                <li><h4>readFile:</h4> Takes a String parameter representing the file name, reads in the file, storing the list name and creating an array of Dodecahedron objects, uses the list name, the array, and number of Dodecahedron objects in the array to create a DodecahedronList2 object, and then returns the DodecahedronList2 object.</li>
+                                <li><h4>addDodecahedron:</h4> Returns nothing but takes three parameters label, color, and edge. creates a new Dodecahedron object, and adds it to the DodecahedronList2 object.</li>
+                                <li><h4>findDodecahedron:</h4> Takes a label of a Dodecahedron as the String parameter and returns the corresponding Dodecahedron object if found in the DodecahedronList2 object else returns null. <u>Case should be ignored when attempting to match the label.</u></li>
+                                <li><h4>deleteDodecahedron:</h4> Takes a String as a parameter that represents the label of the Dodecahedron and returns the Dodecahedron if it is found in the DodecahedronList2 object and deleted else returns null. <u>consider using findDodecahedron</u></li>
+                                <li><h4>editDodecahedron:</h4> Takes three parameters label, color, and edge. uses the label to find the corresponding the Dodecahedron object in the list. If found, sets the color and edge to the values passed in as parameters, and returns true. if not found returns false</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <h4>DodecahedronList2MenuApp.java</h4>
+                    <h5>Requirements:</h5>
+                    <p>Create a DodecahedronList2MenuApp class with a main method that presents the user with a menu with eight options. read input from a file, print report, print summary, add a Dodecahedron object to the DodecahedronList object, delete a Dodecahedron object from the DodecahedronList object, find a Dodecahedron object in the DodecahedronList object, Edit a Dodecahedron in the DodecahedronList object, and quit the program</p>
+                    <h5>Design:</h5>
+                    <p>The main method should print a list of options with the action code and a short description followed by a line with just the action codes prompting the user to select an action. After the user enters an action code, the action is performed. Then the line with just the action codes prompting the user to select an action is printed again to accept the next code. The user may continue to perform actions until ‘Q’ is entered to quit the program. Your program should accept both uppercase and lowercase action codes.</p>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <h4>Explanation</h4>
+                    <p></p>
+                </div>
             </div>
+            
+            <div class="pagExtra"></div>
             <div class="row">
                 <h6 class="col-md-6 col-xs-offset-3 center" id="copyright">copyright &copy; <a href="http://perrybunn.github.io/">Perry Bunn</a></h6>
             </div>
