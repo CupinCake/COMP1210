@@ -11,8 +11,14 @@ body {
     overflow-x: hidden;
 }
 
+div {
+    overflow-x: hidden;
+}
+
 .code {
     font-family: 'Source Code Pro', monospace;
+    background-color: lightgray;
+    border-radius: 8px;
 }
 
 .center {
