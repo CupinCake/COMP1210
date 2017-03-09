@@ -189,19 +189,18 @@ public class DodecahedronList2 {
     * @return returns the object deleted
     */
    public Dodecahedron deleteDodecahedron(String labelIn) {
-      Dodecahedron dodObjCopy = null;
+      Dodecahedron[] dodObjCopy = new Dodecahedron[1];
       for (int i = 0; i < arrSize; i++) {
-         if (dodObjList[i].getLabel() == labelIn) {
-            dodObjCopy = dodObjList[i];
+         if (dodObjList[i].getLabel().equals(labelIn)) {
+            dodObjCopy[0] = findDodecahedron(labelIn);
             for (int j = i; j < arrSize - 1; j++) {
                dodObjList[j] = dodObjList[j + 1];
             }
             dodObjList[arrSize - 1] = null;
             arrSize--;
-            return dodObjList[i];
          }
       }
-      return dodObjCopy;
+      return dodObjCopy[0];
    }
 
    /**
