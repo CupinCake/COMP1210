@@ -28,6 +28,15 @@ p {
     text-indent: 1.5em;
 }
 
+.code p {
+    text-indent: 0px;
+    padding-left: .5vw;
+}
+
+span {
+    color: #00c300;
+}
+
 h3 {
     font-size: 2vw;
 }

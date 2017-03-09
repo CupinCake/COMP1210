@@ -48,32 +48,38 @@
                 <div class="col-md-10 col-md-offset-1" id="arrVsArrL">
                     <hr>
                     <h3>Array vs ArrayList</h3>
-                    <p>in Java there are two ways to create an 'array'. Arrays are simple fixed sized arrays.</p>
+                    <p>In Java there are two ways to create an 'array'. Arrays are simple fixed sized arrays.</p>
+                    
                     <div class="code">
-                        // Array Example<br>
+                        <span>// Array Example</span><br>
                         int[] name = new int[size];
                     </div>
+                    
                     <p>ArrayList are dynamic sized arrays that implement list interface.</p>
+                    
                     <div class="code">
-                        // ArrayList Example<br>
+                        <span>// ArrayList Example</span><br>
                         ArrayList&lt;Type&gt; name = new ArrayList&lt;Type&gt;();
                     </div>
-                    <p>An Array is a fixed size data structure while ArrayList is not. you dont need to mention the size of an ArrayList when creating its object. even if you do specify an initial capasity you can always add more to the ArrayList. for example:</p>
+                    
+                    <p>An Array is a fixed size data structure while ArrayList is not. You dont need to mention the size of an ArrayList when creating its object. Even if you do specify an initial capasity you can always add more to the ArrayList. for example:</p>
+                    
                     <div class="code">
-                        // Array<br>
-                        int[] arr = new int[3]; // the array size is fixed at 3 objects.<br>
+                        <span>// Array</span><br>
+                        int[] arr = new int[3]; <span>// the array size is fixed at 3 objects.</span><br>
                         arr[0] = 1;<br>
                         arr[1] = 2;<br>
-                        arr[2] = 3; // we cant add anymore objects to the array without getting a NullPointerExeption<br>
+                        arr[2] = 3; <span>// we cant add anymore objects to the array without getting a NullPointerExeption</span><br>
                         <br>
-                        // ArrayList<br>
+                        <span>// ArrayList</span><br>
                         ArrayList&lt;Integer&gt; arrL = new ArrayList&lt;Integer&gt;();<br>
                         arrL.add(1);<br>
                         arrL.add(2);<br>
                         arrL.add(3);<br>
                         arrL.add(4);<br>
-                        // we can add as many elements as we want essentially
+                        <span>// we can add as many elements as we want essentially</span>
                     </div>
+                    
                     <p>Arrays can contain both primitive data types aswell as objects of a class. however ArrayList only allows objects, not primitive data types.</p>
                 </div>
             </div>

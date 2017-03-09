@@ -41,13 +41,6 @@ public class DodecahedronList2 {
       for (int i = 0; i < arrSize; i++) {
          total += dodObjList[i].surfaceArea();
       }
-      /*
-      int index = 0;
-      while (index < dodObjList.length) {
-         total += dodObjList.get(index).surfaceArea();
-         index++;
-      }
-      */
       return total;
    }
    /**
@@ -81,7 +74,7 @@ public class DodecahedronList2 {
       return total;
    }
    /**
-   @return return the average surfaec to volume ratio
+   @return return the average surface to volume ratio
    */
    public double averageSurfaceToVolumeRatio() {
       double total = 0;
@@ -92,7 +85,7 @@ public class DodecahedronList2 {
       return total;
    }
    /**
-   @return returns the obj atributes
+   @return returns the obj attributes
    */
    public String toString() {
       String result = listName + "\n";
@@ -132,11 +125,10 @@ public class DodecahedronList2 {
     *
     * @param fileNameIn takes a file name in to look for
     * @return returns the list generated from the file
-    * @throws IOException incase the file is not found
+    * @throws IOException in case the file is not found
     */
    public DodecahedronList2 readFile(String fileNameIn) throws IOException {
       Scanner scanFile = new Scanner(new File(fileNameIn));
-      Dodecahedron[] dodObjList2;
       String dodObjListName = "";
       String label = "";
       String color = "";
@@ -172,8 +164,8 @@ public class DodecahedronList2 {
 
    /**
     *
-    * @param labelIn takes the label to find in the arraylist
-    * @return returns the object found in the arraylist
+    * @param labelIn takes the label to find in the array
+    * @return returns the object found in the array
     */
    public Dodecahedron findDodecahedron(String labelIn) {
       for (Dodecahedron dodObj : dodObjList) {
@@ -186,7 +178,7 @@ public class DodecahedronList2 {
 
    /**
     *
-    * @param labelIn takes the label to delete from the arraylist
+    * @param labelIn takes the label to delete from the array
     * @return returns the object deleted
     */
    public Dodecahedron deleteDodecahedron(String labelIn) {
@@ -207,7 +199,7 @@ public class DodecahedronList2 {
    /**
     *
     *
-    * @param labelIn takes input for label to find in the arraylist.
+    * @param labelIn takes input for label to find in the array.
     * @param colorIn takes input for color in the constructor.
     * @param edgeIn takes input for the edge in the constructor.
     * @return returns if the edit was successful
