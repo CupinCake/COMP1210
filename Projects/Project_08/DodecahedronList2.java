@@ -13,9 +13,10 @@ public class DodecahedronList2 {
    /**
     * @param listNameIn input for the listName
     * @param dodObjListIn input for the dodObjList
-    * @param arrSizeIn
+    * @param arrSizeIn input that 'resets' the arrSize variable
     */
-   public DodecahedronList2(String listNameIn, Dodecahedron[] dodObjListIn, int arrSizeIn) {
+   public DodecahedronList2(String listNameIn, Dodecahedron[] dodObjListIn,
+                                                             int arrSizeIn) {
       listName = listNameIn;
       dodObjList = dodObjListIn;
       arrSize = arrSizeIn;
