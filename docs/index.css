@@ -31,10 +31,12 @@ p {
 .code p {
     text-indent: 0px;
     padding-left: .5vw;
+
+    padding-right: .5vw;
 }
 
 span {
-    color: #00c300;
+    color: #e54848;
 }
 
 h3 {
