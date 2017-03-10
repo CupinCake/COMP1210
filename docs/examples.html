@@ -54,7 +54,7 @@
             <div class="row">
                 <div class="nav">
                     <div class="col-sm-1 center">
-                        <a href="">Project1</a>
+                        <a href="">Project 1</a>
                     </div>
                     <div class="col-sm-1 center">
                         <a href="">Project 2</a>
@@ -92,9 +92,9 @@
                     <div class="col-md-5 col-md-offset-0">
                         <h4>Dowloads</h4>
                         <ul>
-                            <li><a href="Projects\Project_06\Example\Example.zip" download>Project 6 Example</a></li>
-                            <li><a href="Projects\Project_06\Project_06.pdf" download>Project 6 Pdf</a> - original document</li>
-                            <li><a href="Notes\06_More_Conditonals_and_Loops.pdf" download>Class notes</a></li>
+                            <li><a href="/downloads/project6/Example.zip" download>Project 6 Example</a></li>
+                            <li><a href="/downloads/project6/Project_06.pdf" download>Project 6 Pdf</a> - original document</li>
+                            <li><a href="/downloads/project6/06_More_Conditonals_and_Loops.pdf" download>Class notes</a></li>
                         </ul>
                     </div>
                     <div class="col-md-5 col-md-offset-0">
@@ -143,7 +143,7 @@
                 </div>
                 <div class="col-md-10 col-md-offset-1">
                     <h4>Explanation</h4>
-                    <p></p>
+                    <p>Place Holder.</p>
                 </div>
             </div>
             
@@ -162,9 +162,9 @@
                     <div class="col-md-5 col-md-offset-0">
                         <h4>Dowloads</h4>
                         <ul>
-                            <li><a href="Projects\Project_08\Example\Example.zip" download>Project 8 Example</a></li>
-                            <li><a href="Projects\Project_08\Project_08.pdf" download>Project 8 Pdf</a> - original document</li>
-                            <li><a href="Notes\08_Arrays.pdf" download>Class notes</a></li>
+                            <li><a href="/downloads/project8/Example.zip" download>Project 8 Example</a></li>
+                            <li><a href="/downloads/project8/Project_08.pdf" download>Project 8 Pdf</a> - original document</li>
+                            <li><a href="/downloads/project8/08_Arrays.pdf" download>Class notes</a></li>
                         </ul>
                     </div>
                     <div class="col-md-5 col-md-offset-0">
@@ -240,7 +240,16 @@
                 </div>
                 <div class="col-md-10 col-md-offset-1">
                     <h4>Explanation</h4>
-                    <p></p>
+                    <p>So for this project we are tasked with replacing ArrayList with Arrays. The only two classes that we will edit from project 6 are DodeacahedronList and DodecahedronListMenuApp. First you need to rename the classes to DodeacahedronList2 and DodecahedronList2MenuApp. Then you need to change the names of all of the thinks that reference the class from project 6. I found the best way to do this is to compile it as is with the class name changes and look at the compile errors. After you fix the most of the compile time errors you need to start changing the ArrayList variables to Arrays. This is not all to hard because the syntax for arrays is fairly simple.</p>
+                    <div class="code">
+                        <p>
+                            <span>// for example I changed the ArrayList at the begining of the DodecahedronList2.java</span><br>
+                            ArrayList&lt;Dodecahedron&gt; dodObjList;<br>
+                            <span>// to</span><br>
+                            Dodecahedron[] dodObjList;<br>
+                        </p>
+                    </div>
+                    <p>Continue this until you change all of the ArrayList objects to Arrays, then compile it. For the deleteDodecahedron method I highly recomend looking at the example files, they are extreamly helpfull in writing this method. The goal for the method is to delete and return an object found in an array. So first we declare a null object to eventually copy the found object in the array. Then we must itterate though the array until we find the desired object. Copy the object to the copy you created earlier and set them equal, now you need to delete the object from the array. This can be done by overwriting the folowing objects in a index below them. dont forget to set the final object to null or you will have two of the same object in the array. Now your object should be 'deleted' from the array, now make sure decriment the size variable that you should have created at the begining of the class, and return the copied object.</p>
                 </div>
             </div>
             
