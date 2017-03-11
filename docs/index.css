@@ -3,10 +3,36 @@
 font-family: 'Roboto', sans-serif;
 font-family: 'Source Code Pro', monospace;
 */
+/* TODO 
+    create resposive fonts for mobile and latge desktops.
+*/
+@media (max-width @sceen-xs) {
+    body {
+        font-size: 3vw;
+    }
+    h1 {
+        
+    }
+    h3 {
+        
+    }
+    h4 {
+        
+    }
+    h5 {
+        
+    }
+}
+
+@media (max-width @screen-md) {
+    body {
+        font-size: 1.3vw;
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 1.3vw;
     color: #000;
     overflow-x: hidden;
 }
@@ -31,7 +57,6 @@ p {
 .code p {
     text-indent: 0px;
     padding-left: .5vw;
-
     padding-right: .5vw;
 }
 
@@ -66,6 +91,3 @@ h4 {
     display: inline;
 }
 
-.pagExtra {
-    height: 25vh;
-}
