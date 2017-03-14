@@ -31,6 +31,13 @@ public class DodecahedronList2 {
    @return retuns the total number of objs in the array
    */
    public int numberOfDodecahedrons() {
+      if (arrSize != 0) {
+         for (int i = 0; i < arrSize; i++) {
+            if (dodObjList[i] == null) {
+               arrSize--;
+            }
+         }
+      }
       return arrSize;
    }
    /**
@@ -168,7 +175,8 @@ public class DodecahedronList2 {
     * @return returns the object found in the array
     */
    public Dodecahedron findDodecahedron(String labelIn) {
-   
+      numberOfDodecahedrons();
+      
       if (arrSize > 0) {
       
          for (Dodecahedron dodObj : dodObjList) {
