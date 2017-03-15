@@ -16,9 +16,9 @@ public class DodecahedronList2MenuApp {
       String listName = "*** no list name assigned ***";
       Dodecahedron[] dodObj = new Dodecahedron[20];
       DodecahedronList2 dodObjList = new DodecahedronList2(listName, dodObj, 0);
-      String fileName = "no file Name";
+      String fileName;
       
-      String userInput = "";
+      String userInput;
       Scanner scanInput = new Scanner(System.in);
       
       System.out.println("Dodecahedron List System Menu\n"
@@ -34,9 +34,9 @@ public class DodecahedronList2MenuApp {
       do {
          System.out.print("Enter Code [R, P, S, A, D, F, E, or Q]: ");
          
-         String label = "";
-         String color = "";
-         double edge = 0;
+         String label;
+         String color;
+         double edge;
          
          userInput = scanInput.nextLine();
          if (userInput.length() == 0) {
