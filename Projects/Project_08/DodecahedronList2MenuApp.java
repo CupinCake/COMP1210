@@ -58,6 +58,7 @@ public class DodecahedronList2MenuApp {
                break;
                
             case 'P':
+            
                System.out.println(dodObjList.toString());
                break;
                

@@ -177,9 +177,9 @@ public class DodecahedronList2 {
       
       if (arrSize > 0) {
       
-         for (Dodecahedron dodObj : dodObjList) {
-            if (dodObj.getLabel().equalsIgnoreCase(labelIn)) {
-               return dodObj;
+         for (int i = 0; i < arrSize; i++) {
+            if (dodObjList[i].getLabel().equalsIgnoreCase(labelIn)) {
+               return dodObjList[i];
             }
          }
          return null;
@@ -221,10 +221,10 @@ public class DodecahedronList2 {
                                                    double edgeIn) {
       if (arrSize != 0) {
          boolean result = false;
-         for (Dodecahedron dodObj : dodObjList) {
-            if (dodObj.getLabel().equals(labelIn)) {
-               dodObj.setColor(colorIn);
-               dodObj.setEdge(edgeIn);
+         for (int i = 0; i < arrSize; i++) {
+            if (dodObjList[i].getLabel().equals(labelIn)) {
+               dodObjList[i].setColor(colorIn);
+               dodObjList[i].setEdge(edgeIn);
                result = true;
                break;
             }
