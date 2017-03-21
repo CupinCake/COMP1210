@@ -37,7 +37,14 @@ p {
 }
 
 span {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.code p span {
     color: #e54848;
+    font-size: 1em;
+    font-weight: 300;
 }
 
 h3 {
