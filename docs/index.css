@@ -12,6 +12,9 @@ body {
     color: #000;
     overflow-x: hidden;
 }
+.nav {
+    padding-top: 1vh;
+}
 
 .code {
     font-family: 'Source Code Pro', monospace;
@@ -74,3 +77,7 @@ h4 {
     display: inline;
 }
 
+
+.noIndent {
+    text-indent: 0px;
+}
