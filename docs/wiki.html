@@ -18,7 +18,7 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-md-4 col-md-offset-4 nav">
+                <div class="col-xs-12 col-sm-10 col-md-6 col-sm-offset-1 col-md-offset-3 nav">
                     <div class="col-xs-2 col-xs-offset-1 center">
                         <a href="index.html">Home</a>
                     </div>
@@ -32,7 +32,7 @@
                         <a href="notes.html">Notes</a>
                     </div>
                     <div class="col-xs-2 center">
-                        <a href="examples.html">Examples</a>
+                        <a href="examples.html">Projects</a>
                     </div>
                 </div>
             </div>
@@ -42,109 +42,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-10 col-md-offset-1" id="arrVsArrL">
-                    <hr>
-                    <h3>Array vs ArrayList</h3>
-                    <p>In Java there are two ways to create an 'array'. Arrays are simple fixed sized arrays.</p>
-                    
-                    <div class="code">
-                        <p>
-                            <span>// Array Example</span><br>
-                            int[] name = new int[size];
-                        </p>
-                    </div>             
-                    <p>ArrayList are dynamic sized arrays that implement list interface.</p>
-                    
-                    <div class="code">
-
-                        <p>
-                            <span>// ArrayList Example</span><br>
-                            ArrayList&lt;Type&gt; name = new ArrayList&lt;Type&gt;();
-                        </p>
-                    </div>
-                    
-                    <p>An Array is a fixed size data structure while ArrayList is not. You dont need to mention the size of an ArrayList when creating its object. Even if you do specify an initial capasity you can always add more to the ArrayList. for example:</p>
-                    
-                    <div class="code">
-                        <p>
-                            <span>// Array</span><br>
-                            int[] arr = new int[3]; <span>// the array size is fixed at 3 objects.</span><br>
-                            arr[0] = 1;<br>
-                            arr[1] = 2;<br>
-                            arr[2] = 3; <span>// we cant add anymore objects to the array without getting a NullPointerExeption</span>br>
-                            <br>
-                            <span>// ArrayList</span><br>
-                            ArrayList&lt;Integer&gt; arrL = new ArrayList&lt;Integer&gt;();<br>
-                            arrL.add(1);<br>
-                            arrL.add(2);<br>
-                            arrL.add(3);<br>
-                            arrL.add(4);<br>
-                            <span>// we can add as many elements as we want essentially</span>
-                        </p>
-                    </div>
-                    
-                    <p>Arrays can contain both primitive data types aswell as objects of a class. however ArrayList only allows objects, not primitive data types.</p>
-                </div>
-                <div class="col-md-10 col-md-offset-1" id="Loops">
-                    <hr>
-                    <h3>Loops</h3>
-                    <h4>While Loops</h4>
-                    <p>While loops take a boolean expression and while that expression is true it will run the code inside of the body of the while statement.</p>
-                    <div class="code">
-                        <p>
-                            <span>// for example a While loop with a boolean condition</span><br>
-                            int i = 0;<br>
-                            while (i &lt; 10) {<br>
-                            &nbsp; System.out.println(i); <span>// this code would run 10 times before exiting</span><br>
-                            &nbsp; i++; <span>// however the i variable would be checked 11 times</span><br>
-                            }<br>
-                            System.out.println("done!");
-                        </p>
-                    </div>
-                    <p>A While loop is essentially a more complex if statement. the if statement will check if the statement is true and if it is then it will run the body of the if statement. the while loop expands on this by continuing to run the body of the loop until a false condition is met. This can be a problem however if our condition never equates to false, we are then stuck in a infinite loop and the program will never end on its own. in our xample above the while loop check to see if i is less then ten and if it is it will print the value of i. once the value of i has been incremented to 10 the loop breaks and then our program prints "done".</p>
-                    <div class="code">
-                        <p>
-                            <span>// this is an example of a infinite loop</span><br>
-                            int i = 0;<br>
-                            while (i &lt; 1) {<br>
-                            &nbsp; System.out.println(i);<br>
-                            &nbsp; i--;<br>
-                            } <span>// This code will continue to print i forever if we let it, or at least until it crashes</span>
-                        </p>
-                    </div>
-                    <p>Sometimes however we can purposfully write code that loops forever. This code still needs to come to an end to become useful though. this is where the break statement comes in handy. a break statement will end the loop when ever the program reads it. so for example, for what ever reason you would want to do this(normaly we wouldnt want to), say we have a while loop thats initial boolean condition is true. once we realize by mistake or not we say once somethingRidiculous happens we want the loop to end. so we would put an if statement nested inside of our while loop to then call the break command.</p>
-                    <div class="code">
-                        <p>
-                            while (true) {<br>
-                            &nbsp; ...<br>
-                            &nbsp; <span>// some code we want to run</span><br>
-                            &nbsp; ...<br>
-                            &nbsp; if (somethingRidiculous() == true) {<br>
-                            &nbsp; &nbsp; break;<br>
-                            &nbsp; }<br>
-                            }
-                        </p>
-                    </div>
-                    <p>we should try our best to not write loops like this because they can be hard to read or understand, so consider them a last resort case if you boolean condition cant be at the top.</p>
-                    
-                    <h4>For Loops</h4>
-                    <p>A For loop is a variant of a While loop, its tailored to step though a loop for a certain number of times. for example we want to print numbers 1 through 10.</p>
-                    <div class="code">
-                        <p>
-                            for (int i = 0; i &lt; 10; i++) {<br>
-                            &nbsp; System.out.println(i + 1);<br>
-                            }
-                        </p>
-                    </div>
-                    <p>When creating a For loop, you must include 4 parts, the init, test, increment, and the body. the init, test, and increment are separated by semi colons.</p>
-                    <h5>Init</h5>
-                    <p>the Init code runs once to set everything up at the beginning of the loop. the most common init is "int i = 0;" this value only exist in the loop. the widespread use of i for the init variable is almost ubiquitous when writing For loops. its use is so common that other programmers may be confused when reading your code with out it. this also extends to using names like "j" and "k" if i is already declared. Never use lowercase L "l", since it looks just like the digit one "1" in many fonts(like the one im writing this in).</p>
-                    <h5>Test</h5>
-                    <p>The Test is just a boolean evaluation, generally "i &lt; someNumber".</p>
-                    <h5>Body</h5>
-                    <p>If the test returns true then the bosy of the For loop then runs once. the body consist of the code you want to run over multiple times.</p>
-                    <h5>Increment</h5>
-                    <p>the increment runs after the body of the code executes, and then steps to test.</p>
+                <div class="col-md-10 col-md-offset-1 center">
+                    <p class="noIndent">The previuos content has been moved to Notes.</p>
+                    <h4>FAQ</h4>
+                    <p class="noIndent">Coming soon.</p>
                 </div>
             </div>
             <div class="row">

@@ -6,11 +6,16 @@ font-family: 'Source Code Pro', monospace;
 /* TODO 
     create resposive fonts for mobile and latge desktops.
 */
+
+
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #000;
     overflow-x: hidden;
+}
+.nav {
+    padding-top: 1vh;
 }
 
 .code {
@@ -74,3 +79,64 @@ h4 {
     display: inline;
 }
 
+.noIndent {
+    text-indent: 0px;
+}
+
+.alert-warning {
+    padding: .5em;
+    margin-bottom: 0;   
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 3.75vw;
+    }
+    h3 {
+        font-size: 5vw;
+    }
+    h5 {
+        font-size: 3.75vw;
+    }
+    h6 {
+        font-size: 3vw;
+    }
+}
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 2vw;
+    }
+    h3 {
+        font-size: 2.75vw;
+    }
+    h5 {
+        font-size: 2.5vw;
+    }
+    h6 {
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        font-size: 1.6vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        font-size: 1vw;
+    }
+    h3 {
+        font-size: 1.75vw;
+    }
+    h5 {
+        font-size: 1.5vw;
+    }
+    h4 {
+        font-size:  1.3vw;
+    }
+    h6 {
+        font-size: .9vw;
+    }
+}
