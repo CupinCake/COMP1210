@@ -113,4 +113,19 @@ public class Dodecahedron {
    public static void resetCount() {
       count = 0;
    }
+   
+   public boolean equals(Object obj) {
+      if (!(obj instanceof Dodecahedron)) {
+         return false;
+      } else {
+         Dodecahedron d = (Dodecahedron) obj;
+         return (label.equalsIgnoreCase(d.getLabel())
+                  && color.equalsIgnoreCase(d.getColor())
+                  && Math.abs(edge - d.getEdge(0) < .000001);
+      }
+   }
+   
+   public int hashCode() {
+      
+   }
 }
