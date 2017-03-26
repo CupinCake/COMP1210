@@ -234,4 +234,21 @@ public class DodecahedronList2 {
          return false;
       }
    }
+   
+   public Dodecahedron findDodecahedronWithShortestEdge() {
+      
+   }
+   
+   public Dodecahedron findDodecahedronWithLongestEdge() {
+      
+   }
+   
+   public Dodecahedron findDodecahedronWithSmallestVolume() {
+      
+   }
+   
+   public Dodecahedron findDodecahedronWithLargestVolume() {
+      
+   }
+
 }
