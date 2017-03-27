@@ -1,5 +1,5 @@
 !1232;s
-A
+J
 SAU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 SCU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 S+U0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
@@ -11,9 +11,17 @@ s#i0
 s#k0
 s#j0
 s#l0
-!51;g
+!80;g
 %\011Dodecahedron.java
 %\011DodecahedronList2.java
-!51;f
+%\011dodecahedron_data_1.txt
+!80;f
 %\011Dodecahedron.java
 %\011DodecahedronList2.java
+%\011dodecahedron_data_1.txt
+!59;l
+%\011DodecahedronTest.java
+%\011DodecahedronList2Test.java
+!485;t
+jgrJUnit0xr	%\011DodecahedronTest.java	1490648800091:P%\011Dodecahedron.java	%\011Dodecahedron.java	1490648800091:P%\011DodecahedronTest.java	%\011DodecahedronList2Test.java	1490649524458:P%\011DodecahedronList2.java	%\011DodecahedronList2.java	1490649524458:P%\011DodecahedronList2Test.java	
+jgrCheckstyle0xr	%\011DodecahedronTest.java	1490649531128:F	%\011Dodecahedron.java	1490649531128:F	%\011DodecahedronList2Test.java	1490649531128:F	%\011DodecahedronList2.java	1490649531128:F	

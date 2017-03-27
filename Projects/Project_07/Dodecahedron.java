@@ -121,11 +121,11 @@ public class Dodecahedron {
          Dodecahedron d = (Dodecahedron) obj;
          return (label.equalsIgnoreCase(d.getLabel())
                   && color.equalsIgnoreCase(d.getColor())
-                  && Math.abs(edge - d.getEdge(0) < .000001);
+                  && Math.abs(edge - d.getEdge()) < .000001);
       }
    }
    
    public int hashCode() {
-      
+      return 0;
    }
 }

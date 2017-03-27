@@ -236,19 +236,47 @@ public class DodecahedronList2 {
    }
    
    public Dodecahedron findDodecahedronWithShortestEdge() {
-      
+      Dodecahedron[] dodTest = new Dodecahedron[1];
+      dodTest[0] = dodObjList[0];
+      for (int i = 0; i < arrSize; i++) {
+         if ( dodObjList[i].getEdge() < dodTest[0].getEdge()) {
+            dodTest[0] = dodObjList[i];
+         }
+      }
+      return dodTest[0];
    }
    
    public Dodecahedron findDodecahedronWithLongestEdge() {
-      
+      Dodecahedron[] dodTest = new Dodecahedron[1];
+      dodTest[0] = dodObjList[0];
+      for (int i = 0; i < arrSize; i++) {
+         if ( dodObjList[i].getEdge() > dodTest[0].getEdge()) {
+            dodTest[0] = dodObjList[i];
+         }
+      }
+      return dodTest[0];
    }
    
    public Dodecahedron findDodecahedronWithSmallestVolume() {
-      
+      Dodecahedron[] dodTest = new Dodecahedron[1];
+      dodTest[0] = dodObjList[0];
+      for (int i = 0; i < arrSize; i++) {
+         if ( dodObjList[i].volume() < dodTest[0].volume()) {
+            dodTest[0] = dodObjList[i];
+         }
+      }
+      return dodTest[0];
    }
    
    public Dodecahedron findDodecahedronWithLargestVolume() {
-      
+      Dodecahedron[] dodTest = new Dodecahedron[1];
+      dodTest[0] = dodObjList[0];
+      for (int i = 0; i < arrSize; i++) {
+         if ( dodObjList[i].volume() > dodTest[0].volume()) {
+            dodTest[0] = dodObjList[i];
+         }
+      }
+      return dodTest[0];
    }
 
 }
