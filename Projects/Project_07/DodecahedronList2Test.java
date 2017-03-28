@@ -19,8 +19,8 @@ public class DodecahedronList2Test {
 
     @Test
     public void getNameTest() throws Exception {
-        DodecahedronList2 dodTest2 = new DodecahedronList2(listName, dodObjList, arrSizeTest);
-        Assert.assertEquals("", "List Test Name", dodTest2.getName());
+     DodecahedronList2 dodTest2 = new DodecahedronList2(listName, dodObjList, arrSizeTest);
+     Assert.assertEquals("", "List Test Name", dodTest2.getName());
     }
 
     @Test

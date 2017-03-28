@@ -132,46 +132,73 @@ public class TriangleList2Test {
                               contains("Number of Triangles: 3"));
    }
 
-   /** Test for readFile(). 
+
+   /** Test for readFile().
+ 
     * @throws IOException for reading a file
     */
+
+
    @Test public void readFileTest() throws IOException {
+
    
-      Triangle[] tArray = new Triangle[20];
+   Triangle[] tArray = new Triangle[20];
+
       tArray[0] = new Triangle(3, 4, 5);
+
       tArray[1] = new Triangle(3, 5, 5);
+
       tArray[2] = new Triangle(3, 3, 3);
+
+
       
-      TriangleList2 tList = new TriangleList2("Test List", null, 0);
+TriangleList2 tList = new TriangleList2("Test List", null, 0);
+
       tList = tList.readFile("triangle.txt");
+
       
-      Assert.assertEquals("readFile Test",
-                           "Nice Small Set of Triangles", 
-                           tList.getListName());
+Assert.assertEquals("Nice Small Set of Triangles", tList.getListName());
+
    }
+
+
    
    /** Test for addTriangle(). */
    @Test public void addTriangleTest() {
+
    
       Triangle[] tArray = new Triangle[20];
+
       tArray[0] = new Triangle(3, 4, 5);
+
       tArray[1] = new Triangle(3, 5, 5);
+
       tArray[2] = new Triangle(3, 3, 3);
+
       
       TriangleList2 tList = new TriangleList2("Test List", tArray, 3);
+
       
       Triangle t = new Triangle(7, 7, 7);
+
       tList.addTriangle(7, 7, 7);
+
       Triangle[] tA = tList.getList();
+
          
       Assert.assertEquals("addTriangle Test",
+
                            t, tA[3]);
+
    }
 
    /** Test for deleteTriangle(). */
+
    @Test public void deleteTriangleTest() {
+
    
       Triangle[] tArray = new Triangle[20];
+
       tArray[0] = new Triangle(3, 4, 5);
       tArray[1] = new Triangle(3, 5, 5);
       tArray[2] = new Triangle(3, 3, 3);
@@ -181,22 +208,35 @@ public class TriangleList2Test {
       Triangle t = new Triangle(3, 5, 5);
       Triangle[] tA = tList.getList();
       Assert.assertEquals("pre deleteTriangle Test",
-                           t, tA[1]);         
+                           t, tA[1]);
+         
    
       Assert.assertTrue("deleteTriangle true Test",
+
                            tList.deleteTriangle(3, 4, 5));
+
    
       Assert.assertEquals("deleteTriangle true Test",
+
                            t, tA[0]);
+
    
       Assert.assertFalse("deleteTriangle false Test",
+
                            tList.deleteTriangle(9, 9, 9));
+
    }
    
 
 //    /** A test that always fails. **/
+
    // @Test public void defaultTest() {
+
       // Assert.assertEquals("Default test added by jGRASP. Delete "
          //    + "this test once you have added your own.", 0, 1);
-   // }
+
+   //
+ }
+
 }
+
