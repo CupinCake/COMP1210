@@ -1,5 +1,4 @@
-# Jan 30, 2017
-### Notes: Classes and Objects
+# Notes: Classes and Objects
 
 #### Objects - basics
 
@@ -70,8 +69,7 @@ It provides methods that generate pseudorandom numbers.
 
 --------
 
-# Feb 1, 2017
-### Notes: Classes and Objects continued
+# Notes: Classes and Objects continued
 
 ##### Math class
 

@@ -1,5 +1,4 @@
-# Jan 23, 2017
-### Notes: Data and expressions
+# Notes: Data and expressions
 
 #### Strings maybe?
 did not take notes.

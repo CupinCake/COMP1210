@@ -109,11 +109,19 @@ public class Dodecahedron {
          + "volume = " + fmt.format(volume()) + " cubic units\n\t"
          + "surface/volume ratio = " + fmt.format(surfaceToVolumeRatio());
    }
-   
+
+   /**
+    *
+    */
    public static void resetCount() {
       count = 0;
    }
-   
+
+   /**
+    *
+    * @param obj input for an object
+    * @return if he object is equal
+    */
    public boolean equals(Object obj) {
       if (!(obj instanceof Dodecahedron)) {
          return false;
@@ -124,7 +132,11 @@ public class Dodecahedron {
                   && Math.abs(edge - d.getEdge()) < .000001);
       }
    }
-   
+
+   /**
+    *
+    * @return returns 0
+    */
    public int hashCode() {
       return 0;
    }

@@ -234,45 +234,65 @@ public class DodecahedronList2 {
          return false;
       }
    }
-   
+
+   //-------------------------------------------------------------------------//
+   // Project 7 below
+   //-------------------------------------------------------------------------//
+
+   /**
+    *
+    * @return returns the object with the shortest edge
+    */
    public Dodecahedron findDodecahedronWithShortestEdge() {
       Dodecahedron[] dodTest = new Dodecahedron[1];
       dodTest[0] = dodObjList[0];
       for (int i = 0; i < arrSize; i++) {
-         if ( dodObjList[i].getEdge() < dodTest[0].getEdge()) {
+         if (dodObjList[i].getEdge() < dodTest[0].getEdge()) {
             dodTest[0] = dodObjList[i];
          }
       }
       return dodTest[0];
    }
-   
+
+   /**
+    *
+    * @return returns the object with the longest edge
+    */
    public Dodecahedron findDodecahedronWithLongestEdge() {
       Dodecahedron[] dodTest = new Dodecahedron[1];
       dodTest[0] = dodObjList[0];
       for (int i = 0; i < arrSize; i++) {
-         if ( dodObjList[i].getEdge() > dodTest[0].getEdge()) {
+         if (dodObjList[i].getEdge() > dodTest[0].getEdge()) {
             dodTest[0] = dodObjList[i];
          }
       }
       return dodTest[0];
    }
-   
+
+   /**
+    *
+    * @return returns the object with the smallest volume
+    */
    public Dodecahedron findDodecahedronWithSmallestVolume() {
       Dodecahedron[] dodTest = new Dodecahedron[1];
       dodTest[0] = dodObjList[0];
       for (int i = 0; i < arrSize; i++) {
-         if ( dodObjList[i].volume() < dodTest[0].volume()) {
+         if (dodObjList[i].volume() < dodTest[0].volume()) {
             dodTest[0] = dodObjList[i];
          }
       }
       return dodTest[0];
    }
-   
+
+   /**
+    *
+    * @return returns the object with the largest volume
+    */
    public Dodecahedron findDodecahedronWithLargestVolume() {
       Dodecahedron[] dodTest = new Dodecahedron[1];
       dodTest[0] = dodObjList[0];
       for (int i = 0; i < arrSize; i++) {
-         if ( dodObjList[i].volume() > dodTest[0].volume()) {
+         if (dodObjList[i].volume() > dodTest[0].volume()) {
             dodTest[0] = dodObjList[i];
          }
       }
