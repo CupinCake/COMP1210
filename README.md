@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/perryBunn/COMP1210.png?label=ready&title=Ready)](https://waffle.io/perryBunn/COMP1210)
 ## Welcome to COMP 1210!
 
 ### your guide to surviving Java.
