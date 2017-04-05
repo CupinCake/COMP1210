@@ -1,5 +1,5 @@
 !1232;s
-A
+J
 SAU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 SCU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 S+U0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
@@ -11,23 +11,26 @@ s#i0
 s#k0
 s#j0
 s#l0
-!88;g
+!110;g
 %\011Pie.java
 %\011WeddingCake.java
 %\011Cookie.java
+%\011BakeryPart1.java
 %\011BakedItem.java
 %\011Cake.java
-!88;f
+!110;f
 %\011Pie.java
 %\011WeddingCake.java
 %\011Cookie.java
+%\011BakeryPart1.java
 %\011BakedItem.java
 %\011Cake.java
-!108;l
+!110;l
 %\011PieTest.java
 %\011WeddingCakeTest.java
 %\011CakeTest.java
-%\011BakedItemTest.java
+%\011BakeryPart1Test.java
 %\011CookieTest.java
-!374;t
-jgrCheckstyle0xr	%\011Pie.java	1491340659415:F	%\011PieTest.java	1491340659415:F	%\011WeddingCakeTest.java	1491340659415:F	%\011WeddingCake.java	1491340659415:F	%\011Cookie.java	1491340659415:F	%\011CakeTest.java	1491340659415:F	%\011BakedItem.java	1491340659415:F	%\011BakedItemTest.java	1491340659415:F	%\011CookieTest.java	1491340659415:F	%\011Cake.java	1491340659415:F	
+!771;t
+jgrJUnit0xr	%\011Pie.java	1491404207650:P%\011PieTest.java	%\011PieTest.java	1491404207650:P%\011Pie.java	%\011WeddingCakeTest.java	1491405246118:P%\011WeddingCake.java	%\011WeddingCake.java	1491405246118:P%\011WeddingCakeTest.java	%\011Cookie.java	1491414888247:P%\011CookieTest.java	%\011CakeTest.java	1491404808484:P%\011Cake.java	%\011CookieTest.java	1491414888247:P%\011Cookie.java	%\011Cake.java	1491404808484:P%\011CakeTest.java	
+jgrCheckstyle0xr	%\011Pie.java	1491414051850:F	%\011PieTest.java	1491414051850:F	%\011WeddingCakeTest.java	1491414051850:F	%\011WeddingCake.java	1491414051850:F	%\011Cookie.java	1491414051850:F	%\011CakeTest.java	1491414051850:F	%\011BakedItem.java	1491414051850:F	%\011CookieTest.java	1491414466232:F	%\011Cake.java	1491414051850:F	
