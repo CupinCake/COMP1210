@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 /**
  *
  */
@@ -105,10 +106,10 @@ public abstract class BakedItem {
             j++;
          }
       }
-   
+      DecimalFormat fmt = new DecimalFormat("$#,##0.00");
       String result = this.getClass().toString().substring(6) 
          + ": " + name + " - " + flavor + "\tQuantity: " + quantity 
-         + "\tPrice: " + price() + "\n" + "(Ingredients: " + ingredientsR + ")";
+         + "\tPrice: " + fmt.format(price()) + "\n" + "(Ingredients: " + ingredientsR + ")";
       return result;
    }
    /**
