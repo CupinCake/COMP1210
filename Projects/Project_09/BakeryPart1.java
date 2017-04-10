@@ -16,6 +16,12 @@ public class BakeryPart1 {
       System.out.println("Cookie");
       System.out.println(c.toString());
       System.out.println("\tc cost: " + c.price() + "\n");
+      
+      Cookie cITest = new Cookie("Chips Delight", "Chocolate Chip", 12,
+            "flour", "sugar", "dark chocolate chips",
+            "butter", "baking soda", "salt", "flour", "sugar", 
+            "dark chocolate chips", "butter", "baking soda", "salt");
+      System.out.println(cITest.toString());
 
       // Pie class
       Pie p1 = new Pie("Weekly Special", "Apple", 1, 0,

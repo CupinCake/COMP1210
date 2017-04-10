@@ -97,7 +97,7 @@ public abstract class BakedItem {
             j++;
          } else if (j == 5 && (i != ingredients.length - 1)) {
             ingredientsR += "\n" + ingredients[i] + ", ";
-            j = 0;
+            j = 1;
          } else if (j == 5 && (i == ingredients.length - 1)) {
             ingredientsR += "\n" + ingredients[i];
             j++;

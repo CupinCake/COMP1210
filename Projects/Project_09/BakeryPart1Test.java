@@ -20,8 +20,10 @@ public class BakeryPart1Test {
     *
     */
    @Test public void mainTest() {
+      BakeryPart1 bp1 = new BakeryPart1();
+      BakedItem.resetCount();
       BakeryPart1.main(null);
-      Assert.assertEquals("", 6, BakedItem.getCount());
+      Assert.assertEquals("", 7, BakedItem.getCount());
    }
    /**
     *
