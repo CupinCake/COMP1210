@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/perryBunn/COMP1210.svg?label=BackBog&title=BackLog)](http://waffle.io/perryBunn/COMP1210)
+[![Stories in Ready](https://badge.waffle.io/perryBunn/COMP1210.svg?label=Backlog&title=Backlog)](http://waffle.io/perryBunn/COMP1210)
 [![Stories in Ready](https://badge.waffle.io/perryBunn/COMP1210.svg?label=Ready&title=Ready)](https://waffle.io/perryBunn/COMP1210)
 [![Stories in Ready](https://badge.waffle.io/perryBunn/COMP1210.svg?label=In%20Progress&title=In%20Progress)](http://waffle.io/perryBunn/COMP1210)
 ## Welcome to COMP 1210!
