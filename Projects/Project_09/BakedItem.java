@@ -68,7 +68,7 @@ public abstract class BakedItem {
    /**
     * @param ingredientsIn input of the ingredients for the object
     */
-   public void setIngredients(String[] ingredientsIn) {
+   public void setIngredients(String ... ingredientsIn) {
       this.ingredients = ingredientsIn;
    }
    /**
@@ -90,7 +90,7 @@ public abstract class BakedItem {
       String ingredientsR = "";
       int j = 0;
       for (int i = 0; i < ingredients.length; i++) {
-         if (j == ingredients.length) {
+         if (j != 5 && j == ingredients.length - 1) {
             ingredientsR += ingredients[i];
          } else if (j < 5 && (i != ingredients.length - 1)) {
             ingredientsR += ingredients[i] + ", ";
@@ -109,7 +109,8 @@ public abstract class BakedItem {
       DecimalFormat fmt = new DecimalFormat("$#,##0.00");
       String result = this.getClass().toString().substring(6) 
          + ": " + name + " - " + flavor + "\tQuantity: " + quantity 
-         + "\tPrice: " + fmt.format(price()) + "\n" + "(Ingredients: " + ingredientsR + ")";
+         + "\tPrice: " + fmt.format(price()) + "\n" + "(Ingredients: " 
+         + ingredientsR + ")";
       return result;
    }
    /**

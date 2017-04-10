@@ -7,7 +7,7 @@ public class Cake extends BakedItem {
    /**
     *
     */
-   public static final double BASE_RATE = 8;
+   public static final double BASE_RATE = 8.0;
    /**
     * @param nameIn creates the name of the object
     * @param flavorIn creates the flavor of the object

@@ -19,7 +19,7 @@ public class CookieTest {
       Cookie c = new Cookie("Chips Delight", "Chocolate Chip", 12,
             "flour", "sugar", "dark chocolate chips",
             "butter", "baking soda", "salt");
-      Assert.assertEquals("", 6.36, c.price(), .001);
+      Assert.assertEquals("", 4.199, c.price(), .001);
    }
    
    // Abstract Method Tests
@@ -108,10 +108,11 @@ public class CookieTest {
    @Test public void setIngredientsTest() {
       Cookie c = new Cookie("Chips Delight", "Chocolate Chip", 12,
             "flour");
-      String[] ingredientsIn = {"flour", "sugar", "dark chocolate chips",
-         "butter", "baking soda", "salt"};
+      String[] ingredientsIn = {"butter", "baking soda", "salt", 
+         "cream filling", "baking powder", "mint", "peanut butter", 
+         "vanilla extract"};
       c.setIngredients(ingredientsIn);
-      Assert.assertEquals("", "butter", c.getIngredients()[3]);
+      Assert.assertEquals("", "cream filling", c.getIngredients()[3]);
    }
    /**
     *
@@ -126,12 +127,33 @@ public class CookieTest {
    /**
     *
     */
-   @Test public void toStringTest() {
+   @Test public void toStringTest1() {
       Cookie c = new Cookie("Chips Delight", "Chocolate Chip", 12,
             "flour", "sugar", "dark chocolate chips",
             "butter", "baking soda", "salt");
       boolean result1 = c.toString().contains("baking soda,");
       boolean result2 = c.toString().contains("salt)");
+      Assert.assertTrue("", result1 && result2);
+   }
+   /**
+    *
+    */
+   @Test public void toStringTest2() {
+      Cookie c = new Cookie("Chips Delight", "Chocolate Chip", 12,
+            "butter", "baking soda", "salt", "cream filling", 
+            "baking powder");
+      boolean result1 = c.toString().contains("baking soda,");
+      boolean result2 = c.toString().contains("salt");
+      Assert.assertTrue("", result1 && result2);
+   }
+   /**
+    *
+    */
+   @Test public void toStringTest3() {
+      Cookie c = new Cookie("Chips Delight", "Chocolate Chip", 12,
+            "butter", "baking soda", "salt", "cream filling");
+      boolean result1 = c.toString().contains("baking soda,");
+      boolean result2 = c.toString().contains("salt");
       Assert.assertTrue("", result1 && result2);
    }
    /**
