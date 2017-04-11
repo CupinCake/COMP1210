@@ -1,5 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/perryBunn/COMP1210.svg?label=backlog&title=BackLog)](http://waffle.io/perryBunn/COMP1210)
 [![Stories in Ready](https://badge.waffle.io/perryBunn/COMP1210.svg?label=ready&title=Ready)](http://waffle.io/perryBunn/COMP1210)
+[![Stories in Ready](https://badge.waffle.io/perryBunn/COMP1210.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/perryBunn/COMP1210)
 ## Welcome to COMP 1210!
 
 ### your guide to surviving Java.
