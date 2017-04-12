@@ -1,5 +1,5 @@
 !1232;s
-A
+J
 SAU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 SCU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 S+U0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
@@ -31,3 +31,6 @@ s#l0
 %\011CakeTest.java
 %\011BakeryPart1Test.java
 %\011CookieTest.java
+!659;t
+jgrJUnit0xr	%\011Cookie.java	1491844956574:P%\011CookieTest.java	%\011BakeryPart1.java	1491845201249:P%\011BakeryPart1Test.java	%\011BakeryPart1Test.java	1491845201249:P%\011BakeryPart1.java	%\011CookieTest.java	1491844956574:P%\011Cookie.java	
+jgrCheckstyle0xr	%\011Pie.java	1491844942513:P	%\011PieTest.java	1491844942513:P	%\011WeddingCakeTest.java	1491844942513:P	%\011WeddingCake.java	1491844942513:P	%\011Cookie.java	1491844942513:P	%\011BakeryPart1.java	1491844942513:P	%\011CakeTest.java	1491844942513:P	%\011BakedItem.java	1491844942513:P	%\011BakeryPart1Test.java	1491844942513:P	%\011CookieTest.java	1491844942513:P	%\011Cake.java	1491844942513:P	
