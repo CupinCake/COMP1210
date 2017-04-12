@@ -89,27 +89,20 @@ public abstract class BakedItem {
    public final String toString() {
       String ingredientsR = "";
       int j = 0;
-      for (int i = 0; i < ingredients.length; i++) {
-         if (j != 5 && j == ingredients.length - 1) {
-            ingredientsR += ingredients[i];
-         } else if (j < 5 && (i != ingredients.length - 1)) {
-            ingredientsR += ingredients[i] + ", ";
-            j++;
-         } else if (j == 5 && (i != ingredients.length - 1)) {
-            ingredientsR += "\n" + ingredients[i] + ", ";
-            j = 1;
-         } else if (j == 5 && (i == ingredients.length - 1)) {
-            ingredientsR += "\n" + ingredients[i];
-            j++;
+      for (String item : ingredients) {
+         if (j == 0) {
+            ingredientsR += item;
+         } else if (j % 5 != 0) {
+            ingredientsR += ", " + item;
          } else {
-            ingredientsR += ingredients[i];
-            j++;
+            ingredientsR += ", \n" + item;
          }
+         j++;
       }
       DecimalFormat fmt = new DecimalFormat("$#,##0.00");
       String result = this.getClass().toString().substring(6) 
-         + ": " + name + " - " + flavor + "\tQuantity: " + quantity 
-         + "\tPrice: " + fmt.format(price()) + "\n" + "(Ingredients: " 
+         + ": " + name + " - " + flavor + "   Quantity: " + quantity 
+         + "   Price: " + fmt.format(price()) + "\n" + "(Ingredients: " 
          + ingredientsR + ")";
       return result;
    }
