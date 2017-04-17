@@ -36,10 +36,10 @@ public class BakedItemList {
 
    /**
     *
-    * @param listName sets the name of the list
+    * @param listNamein sets the name of the list
     */
-   public void setListName(String listName) {
-      this.listName = listName;
+   public void setListName(String listNamein) {
+      this.listName = listNamein;
    }
 
    /**
@@ -52,10 +52,10 @@ public class BakedItemList {
 
    /**
     *
-    * @param itemList sets the items in the list
+    * @param itemListin sets the items in the list
     */
-   public void setItemList(BakedItem[] itemList) {
-      this.itemList = itemList;
+   public void setItemList(BakedItem[] itemListin) {
+      this.itemList = itemListin;
    }
 
    /**
@@ -68,10 +68,10 @@ public class BakedItemList {
 
    /**
     *
-    * @param itemCount sets the number of items in the list
+    * @param itemCountin sets the number of items in the list
     */
-   public void setItemCount(int itemCount) {
-      this.itemCount = itemCount;
+   public void setItemCount(int itemCountin) {
+      this.itemCount = itemCountin;
    }
 
    /**
@@ -84,10 +84,10 @@ public class BakedItemList {
 
    /**
     *
-    * @param excludedRecords sets the excludued items
+    * @param excludedRecordsin sets the excludued items
     */
-   public void setExcludedRecords(String[] excludedRecords) {
-      this.excludedRecords = excludedRecords;
+   public void setExcludedRecords(String[] excludedRecordsin) {
+      this.excludedRecords = excludedRecordsin;
    }
 
    /**
@@ -100,10 +100,10 @@ public class BakedItemList {
 
    /**
     *
-    * @param excludedCount sets the number of excluded items
+    * @param excludedCountin sets the number of excluded items
     */
-   public void setExcludedCount(int excludedCount) {
-      this.excludedCount = excludedCount;
+   public void setExcludedCount(int excludedCountin) {
+      this.excludedCount = excludedCountin;
    }
 
    /**
@@ -138,7 +138,7 @@ public class BakedItemList {
          typeS = elements[0];
          type = typeS.toUpperCase().charAt(0);
          switch (type) {
-            case 'C' : {
+            case 'C' : 
                String nameIn = elements[1];
                String flavorIn = elements[2];
                int quantityIn = Integer.parseInt(elements[3]);
@@ -154,8 +154,7 @@ public class BakedItemList {
                itemList[itemCount] = c;
                itemCount++;
                break;
-            }
-            case 'P': {
+            case 'P': 
                String nameIn = elements[1];
                String flavorIn = elements[2];
                int quantityIn = Integer.parseInt(elements[3]);
@@ -172,8 +171,7 @@ public class BakedItemList {
                itemList[itemCount] = p;
                itemCount++;
                break;
-            }
-            case 'K': {
+            case 'K': 
                String nameIn = elements[1];
                String flavorIn = elements[2];
                int quantityIn = Integer.parseInt(elements[3]);
@@ -190,8 +188,7 @@ public class BakedItemList {
                itemList[itemCount] = k;
                itemCount++;
                break;
-            }
-            case 'W': {
+            case 'W': 
                String nameIn = elements[1];
                String flavorIn = elements[2];
                int quantityIn = Integer.parseInt(elements[3]);
@@ -209,12 +206,10 @@ public class BakedItemList {
                itemList[itemCount] = w;
                itemCount++;
                break;
-            }
-            default: {
+            default: 
                excludedRecords[excludedCount] = input;
                excludedCount++;
                break;
-            }
          }
       }
    }
@@ -231,7 +226,10 @@ public class BakedItemList {
       }
       System.out.println(result);
    }
-
+   
+   /**
+    *
+    */
    public void generateReportByClass() {
       BakedItem[] itemListCopy = Arrays.copyOf(itemList, itemCount);
       Arrays.sort(itemListCopy);
@@ -244,6 +242,9 @@ public class BakedItemList {
       System.out.println(result);
    }
 
+   /**
+    *
+    */
    public void generateReportByPrice() {
       BakedItem[] itemListCopy = Arrays.copyOf(itemList, itemCount);
       Arrays.sort(itemListCopy, new PriceComparator());
@@ -255,7 +256,10 @@ public class BakedItemList {
       }
       System.out.println(result);
    }
-
+   
+   /**
+    *
+    */
    public void generateReportByFlavor() {
       BakedItem[] itemListCopy = Arrays.copyOf(itemList, itemCount);
       Arrays.sort(itemListCopy, new FlavorComparator());
@@ -268,6 +272,9 @@ public class BakedItemList {
       System.out.println(result);
    }
 
+   /**
+    *
+    */
    public void generateExcludedRecordsReport() {
       System.out.println("---------------------------------------\n"
             + "Excluded Records Report\n"

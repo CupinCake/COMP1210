@@ -3,7 +3,7 @@ import java.text.DecimalFormat;
 /**
  *
  */
-public abstract class BakedItem implements Comparable<BakedItem>{
+public abstract class BakedItem implements Comparable<BakedItem> {
 
    protected String name;
    protected String flavor;
@@ -130,11 +130,11 @@ public abstract class BakedItem implements Comparable<BakedItem>{
 
    /**
     *
-    * @param Object takes in an object to campare to
+    * @param object takes in an object to campare to
     * @return returns an int based on how alike the to objects are
     */
-   public int compareTo(BakedItem Object) {
-      return this.toString().toLowerCase().compareTo(Object.toString()
+   public int compareTo(BakedItem object) {
+      return this.toString().toLowerCase().compareTo(object.toString()
             .toLowerCase());
    }
 }
