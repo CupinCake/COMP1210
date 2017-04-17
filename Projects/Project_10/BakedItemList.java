@@ -116,9 +116,8 @@ public class BakedItemList {
 
    /**
     *
-    * @param listCount resets the number of list
     */
-   public static void resetListCount(int listCount) {
+   public static void resetListCount() {
       BakedItemList.listCount = 0;
    }
 
@@ -220,6 +219,9 @@ public class BakedItemList {
       }
    }
 
+   /**
+    *
+    */
    public void generateReport() {
       String result = "---------------------------------------\n"
             + "Report for Auburn's Best Bakery\n"
@@ -259,7 +261,7 @@ public class BakedItemList {
       Arrays.sort(itemListCopy, new FlavorComparator());
       String result = "---------------------------------------\n"
             + "Report for Auburn's Best Bakery (by Flavor)\n"
-            + "---------------------------------------";
+            + "---------------------------------------\n\n";
       for (int i = 0; i < itemCount; i++) {
          result += itemListCopy[i].toString() + "\n\n";
       }

@@ -21,7 +21,7 @@ public class BakeryPart2 {
             a.generateReportByFlavor();
             a.generateExcludedRecordsReport();
          } catch (IOException e) {
-           e.printStackTrace();
+//            e.printStackTrace();
          }
       }
    }

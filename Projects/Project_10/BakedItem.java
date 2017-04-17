@@ -3,7 +3,7 @@ import java.text.DecimalFormat;
 /**
  *
  */
-public abstract class BakedItem {
+public abstract class BakedItem implements Comparable<BakedItem>{
 
    protected String name;
    protected String flavor;
