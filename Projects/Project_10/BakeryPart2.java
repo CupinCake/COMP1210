@@ -8,7 +8,7 @@ import java.io.IOException;
 public class BakeryPart2 {
    /**
     * @param args command line arguments. taakes in the file name
-    * @throws IOException thows an exception if a file is not found
+    * @throws IOException throws an exception if a file is not found
     */
    public static void main(String[] args) throws IOException {
       if (args.length == 0) {
@@ -25,7 +25,7 @@ public class BakeryPart2 {
             a.generateReportByFlavor();
             a.generateExcludedRecordsReport();
          } catch (IOException e) {
-//            e.printStackTrace();
+            e.printStackTrace();
          }
       }
    }

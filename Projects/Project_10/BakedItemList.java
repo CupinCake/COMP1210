@@ -137,76 +137,87 @@ public class BakedItemList {
          elements = input.split(",");
          typeS = elements[0];
          type = typeS.toUpperCase().charAt(0);
+
+         // Switch variables
+         String nameIn;
+         String flavorIn;
+         int quantityIn;
+         int layersIn;
+         int tiersIn;
+         String[] ingredients = new String[50];
+         int j;
+         String[] ingredientsTrim;
+
          switch (type) {
-            case 'C' : 
-               String nameIn = elements[1];
-               String flavorIn = elements[2];
-               int quantityIn = Integer.parseInt(elements[3]);
-               String[] ingredients = new String[50];
-               int j = 0;
+            case 'C':
+               nameIn = elements[1];
+               flavorIn = elements[2];
+               quantityIn = Integer.parseInt(elements[3]);
+               j = 0;
                for (int i = 0; i < elements.length - 4; i++) {
                   ingredients[i] = elements[i + 4];
                   j++;
                }
-               String[] ingredientsTrim = Arrays.copyOf(ingredients, j);
+               ingredientsTrim = Arrays.copyOf(ingredients, j);
                Cookie c = new Cookie(nameIn, flavorIn, quantityIn,
                      ingredientsTrim);
                itemList[itemCount] = c;
                itemCount++;
                break;
-            case 'P': 
-               String nameIn = elements[1];
-               String flavorIn = elements[2];
-               int quantityIn = Integer.parseInt(elements[3]);
+
+            case 'P':
+               nameIn = elements[1];
+               flavorIn = elements[2];
+               quantityIn = Integer.parseInt(elements[3]);
                double crustCostIn = Double.parseDouble(elements[4]);
-               String[] ingredients = new String[50];
-               int j = 0;
+               j = 0;
                for (int i = 0; i < elements.length - 5; i++) {
                   ingredients[i] = elements[i + 5];
                   j++;
                }
-               String[] ingredientsTrim = Arrays.copyOf(ingredients, j);
+               ingredientsTrim = Arrays.copyOf(ingredients, j);
                Pie p = new Pie(nameIn, flavorIn, quantityIn, crustCostIn,
                      ingredientsTrim);
                itemList[itemCount] = p;
                itemCount++;
                break;
-            case 'K': 
-               String nameIn = elements[1];
-               String flavorIn = elements[2];
-               int quantityIn = Integer.parseInt(elements[3]);
-               int layersIn = Integer.parseInt(elements[4]);
-               String[] ingredients = new String[50];
-               int j = 0;
+
+            case 'K':
+               nameIn = elements[1];
+               flavorIn = elements[2];
+               quantityIn = Integer.parseInt(elements[3]);
+               layersIn = Integer.parseInt(elements[4]);
+               j = 0;
                for (int i = 0; i < elements.length - 5; i++) {
                   ingredients[i] = elements[i + 5];
                   j++;
                }
-               String[] ingredientsTrim = Arrays.copyOf(ingredients, j);
+               ingredientsTrim = Arrays.copyOf(ingredients, j);
                Cake k = new Cake(nameIn, flavorIn, quantityIn, layersIn,
                      ingredientsTrim);
                itemList[itemCount] = k;
                itemCount++;
                break;
-            case 'W': 
-               String nameIn = elements[1];
-               String flavorIn = elements[2];
-               int quantityIn = Integer.parseInt(elements[3]);
-               int layersIn = Integer.parseInt(elements[4]);
-               int tiersIn = Integer.parseInt(elements[5]);
-               String[] ingredients = new String[50];
-               int j = 0;
+
+            case 'W':
+               nameIn = elements[1];
+               flavorIn = elements[2];
+               quantityIn = Integer.parseInt(elements[3]);
+               layersIn = Integer.parseInt(elements[4]);
+               tiersIn = Integer.parseInt(elements[5]);
+               j = 0;
                for (int i = 0; i < elements.length - 6; i++) {
                   ingredients[i] = elements[i + 6];
                   j++;
                }
-               String[] ingredientsTrim = Arrays.copyOf(ingredients, j);
+               ingredientsTrim = Arrays.copyOf(ingredients, j);
                WeddingCake w = new WeddingCake(nameIn, flavorIn, quantityIn,
                      layersIn, tiersIn, ingredientsTrim);
                itemList[itemCount] = w;
                itemCount++;
                break;
-            default: 
+
+            default:
                excludedRecords[excludedCount] = input;
                excludedCount++;
                break;
