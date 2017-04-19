@@ -39,4 +39,28 @@ public class BakeryPart2Test {
       BakeryPart2.main(args);
       Assert.assertEquals(1, BakedItemList.getListCount());
    }
+   
+   /**
+    *
+    * @throws Exception throws exception because it might
+    */
+   @Test
+   public void main3() throws Exception {
+      BakeryPart2 app = new BakeryPart2();
+      String[] args = {""};
+      BakeryPart2.main(args);
+      Assert.assertEquals(0, BakedItemList.getListCount());
+   }
+
+   /**
+    *
+    * @throws Exception throws exception because it might
+    */
+   @Test
+   public void main4() throws Exception {
+      BakeryPart2 app = new BakeryPart2();
+      String[] args = {null};
+      BakeryPart2.main(args);
+      Assert.assertEquals(0, BakedItemList.getListCount());
+   }
 }

@@ -40,14 +40,14 @@ public class WeddingCakeTest {
     *
     */
    @Test public void setTiersTest() {
-      c1.setLayers(4);
-      int result1 = c1.getLayers();
+      c1.setTiers(4);
+      int result1 = c1.getTiers();
       Assert.assertEquals("", 4, result1);
-      c2.setLayers(1);
-      int result2 = c2.getLayers();
+      c2.setTiers(1);
+      int result2 = c2.getTiers();
       Assert.assertFalse("", 0 == result2);
-      c3.setLayers(3);
-      int result3 = c3.getLayers();
+      c3.setTiers(3);
+      int result3 = c3.getTiers();
       Assert.assertTrue("", 3 == result3);
    }
    /**

@@ -7,11 +7,11 @@ import java.io.IOException;
 
 public class BakeryPart2 {
    /**
-    * @param args command line arguments
-    * @throws IOException throws an exeption if the file is not found
+    * @param args command line argument for the file name
+    * @throws IOException exception if the file is not found
     */
    public static void main(String[] args) throws IOException {
-      if (args.length == 0 || args[0] == null) {
+      if (args[0] == null || args[0] == "") {
          System.out.println("File name expected as command line argument.");
          System.out.println("Program ending.");
       } else {
