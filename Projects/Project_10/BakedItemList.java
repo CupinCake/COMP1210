@@ -127,7 +127,7 @@ public class BakedItemList {
     * @throws IOException throws an exception if the file is not found
     */
    public void readItemFile(String fileName) throws IOException {
-      Scanner scan = new Scanner(new File(fileName)).useDelimiter(",");
+      Scanner scan = new Scanner(new File(fileName));
       listName = scan.nextLine();
       String[] elements;
       char type;
@@ -142,6 +142,7 @@ public class BakedItemList {
          String nameIn;
          String flavorIn;
          int quantityIn;
+         double crustCostIn;
          int layersIn;
          int tiersIn;
          String[] ingredients = new String[50];
@@ -169,7 +170,7 @@ public class BakedItemList {
                nameIn = elements[1];
                flavorIn = elements[2];
                quantityIn = Integer.parseInt(elements[3]);
-               double crustCostIn = Double.parseDouble(elements[4]);
+               crustCostIn = Double.parseDouble(elements[4]);
                j = 0;
                for (int i = 0; i < elements.length - 5; i++) {
                   ingredients[i] = elements[i + 5];
@@ -226,22 +227,22 @@ public class BakedItemList {
    }
 
    /**
-    *
+    * @return returns a string of the itemlist as is
     */
-   public void generateReport() {
+   public String generateReport() {
       String result = "---------------------------------------\n"
             + "Report for Auburn's Best Bakery\n"
             + "---------------------------------------\n\n";
       for (int i = 0; i < itemCount; i++) {
          result += itemList[i].toString() + "\n\n";
       }
-      System.out.println(result);
+      return result;
    }
-   
+
    /**
-    *
+    * @return returns a string of the itemlist ordered by the class name
     */
-   public void generateReportByClass() {
+   public String generateReportByClass() {
       BakedItem[] itemListCopy = Arrays.copyOf(itemList, itemCount);
       Arrays.sort(itemListCopy);
       String result = "---------------------------------------\n"
@@ -250,13 +251,13 @@ public class BakedItemList {
       for (int i = 0; i < itemCount; i++) {
          result += itemListCopy[i].toString() + "\n\n";
       }
-      System.out.println(result);
+      return result;
    }
 
    /**
-    *
+    * @return returns a string of the itemlist ordered by the price
     */
-   public void generateReportByPrice() {
+   public String generateReportByPrice() {
       BakedItem[] itemListCopy = Arrays.copyOf(itemList, itemCount);
       Arrays.sort(itemListCopy, new PriceComparator());
       String result = "---------------------------------------\n"
@@ -265,13 +266,13 @@ public class BakedItemList {
       for (int i = 0; i < itemCount; i++) {
          result += itemListCopy[i].toString() + "\n\n";
       }
-      System.out.println(result);
+      return result;
    }
-   
+
    /**
-    *
+    * @return returns a string of the itemlist ordered by the flavor
     */
-   public void generateReportByFlavor() {
+   public String generateReportByFlavor() {
       BakedItem[] itemListCopy = Arrays.copyOf(itemList, itemCount);
       Arrays.sort(itemListCopy, new FlavorComparator());
       String result = "---------------------------------------\n"
@@ -280,19 +281,20 @@ public class BakedItemList {
       for (int i = 0; i < itemCount; i++) {
          result += itemListCopy[i].toString() + "\n\n";
       }
-      System.out.println(result);
+      return result;
    }
 
    /**
-    *
+    * @return returns a string of the excludedlist
     */
-   public void generateExcludedRecordsReport() {
-      System.out.println("---------------------------------------\n"
+   public String generateExcludedRecordsReport() {
+      String result = "---------------------------------------\n"
             + "Excluded Records Report\n"
-            + "---------------------------------------");
+            + "---------------------------------------\n\n";
       for (int i = 0; i < excludedCount; i++) {
-         System.out.println("*** invalid category *** for line:\n"
-               + excludedRecords[i]);
+         result += "*** invalid category *** for line:\n"
+               + excludedRecords[i] + "\n";
       }
+      return result;
    }
 }

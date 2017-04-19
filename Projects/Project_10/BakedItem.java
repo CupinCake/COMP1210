@@ -17,8 +17,8 @@ public abstract class BakedItem implements Comparable<BakedItem> {
     * @param quantityIn creates the qunatity of the object
     * @param ingredientsIn creates the ingredients of the object
     */
-   public BakedItem(String nameIn, String flavorIn, int quantityIn, 
-                                             String ... ingredientsIn) {
+   public BakedItem(String nameIn, String flavorIn, int quantityIn,
+                    String ... ingredientsIn) {
       name = nameIn;
       flavor = flavorIn;
       quantity = quantityIn;

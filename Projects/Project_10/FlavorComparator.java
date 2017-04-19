@@ -6,10 +6,8 @@ import java.util.Comparator;
  */
 
 public class FlavorComparator implements Comparator<BakedItem> {
-   
    @Override
    public int compare(BakedItem b1, BakedItem b2) {
-      return b1.getFlavor().toLowerCase().compareTo(b2.getFlavor()
-              .toLowerCase());
+      return 0;
    }
 }
