@@ -6,13 +6,16 @@ font-family: 'Source Code Pro', monospace;
 /* TODO 
     create resposive fonts for mobile and latge desktops.
 */
-
+html {
+    height: 100%;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #000;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 .nav {
     padding-top: 1vh;
@@ -88,12 +91,46 @@ h4 {
     margin-bottom: 0;   
 }
 
+footer {
+    background-color: lightgray;
+    color: #575757;
+    padding-top: 1vh;
+    width: 100vw;
+}
+
+#footer h6 {
+    padding: 0;
+    margin-top: 0;
+}
+
+#footer lh {
+    font-size: 1.096vw;
+}
+
+#disclaimer {
+    font-size: 1.5vw;
+}
+
+.content {
+    min-height: 100vh;
+}
+/* XS */
 @media only screen and (max-width: 767px) {
     body {
-        font-size: 3.75vw;
+        font-size: 6vw;
+    }
+    .content {
+        padding-bottom: 5vh;
+        margin-left: auto;
+    }
+    .nav {
+        font-size: 5vw;
+    }
+    h1 {
+        font-size: 8vw;
     }
     h3 {
-        font-size: 5vw;
+        font-size: 6vw;
     }
     h5 {
         font-size: 3.75vw;
@@ -101,7 +138,25 @@ h4 {
     h6 {
         font-size: 3vw;
     }
+    .xs-center {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        align-self: center;
+        text-decoration: underline;
+        margin-left: auto;
+    }
+    .paddingT {
+        padding-top: 3vh;
+    }
+    lh {
+        font-size: 6vw;
+    }
+    li {
+        font-size: 5vw;
+    }
 }
+/* SM */
 @media only screen and (min-width: 768px) {
     body {
         font-size: 2.5vw;
@@ -116,13 +171,13 @@ h4 {
         font-size: 2vw;
     }
 }
-
+/* MD */
 @media only screen and (min-width: 992px) {
     body {
         font-size: 1.6vw;
     }
 }
-
+/* LG */
 @media only screen and (min-width: 1200px) {
     body {
         font-size: 1vw;
