@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 /**
@@ -151,7 +152,6 @@ public class BakedItemList {
 
          switch (type) {
             case 'C':
-               // TODO: 4/24/2017 this is roughly what happens
                try {
                   nameIn = elements[1];
                   flavorIn = elements[2];
@@ -166,69 +166,126 @@ public class BakedItemList {
                            ingredientsTrim);
                   itemList[itemCount] = c;
                   itemCount++;
-                  break;
                } catch (NumberFormatException e) {
-                  "*** " + e + " in:\n" + input;
+                  String result = "*** " + e + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
                } catch (NoSuchElementException e) {
-                  "*** " + e + " in:\n" + input;
+                  String result = "*** " + e + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
+               } catch (ArrayIndexOutOfBoundsException e) {
+                  NoSuchElementException r = new NoSuchElementException();
+                  String result = "*** " + r + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
                }
+               break;
 
             case 'P':
-               nameIn = elements[1];
-               flavorIn = elements[2];
-               quantityIn = Integer.parseInt(elements[3]);
-               crustCostIn = Double.parseDouble(elements[4]);
-               j = 0;
-               for (int i = 0; i < elements.length - 5; i++) {
-                  ingredients[i] = elements[i + 5];
-                  j++;
+               try {
+                  nameIn = elements[1];
+                  flavorIn = elements[2];
+                  quantityIn = Integer.parseInt(elements[3]);
+                  crustCostIn = Double.parseDouble(elements[4]);
+                  j = 0;
+                  for (int i = 0; i < elements.length - 5; i++) {
+                     ingredients[i] = elements[i + 5];
+                     j++;
+                  }
+                  ingredientsTrim = Arrays.copyOf(ingredients, j);
+                  Pie p = new Pie(nameIn, flavorIn, quantityIn, crustCostIn,
+                        ingredientsTrim);
+                  itemList[itemCount] = p;
+                  itemCount++;
+               } catch (NumberFormatException e) {
+                  String result = "*** " + e + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
+               } catch (NoSuchElementException e) {
+                  String result = "*** " + e + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
+               } catch (ArrayIndexOutOfBoundsException e) {
+                  NoSuchElementException r = new NoSuchElementException();
+                  String result = "*** " + r + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
                }
-               ingredientsTrim = Arrays.copyOf(ingredients, j);
-               Pie p = new Pie(nameIn, flavorIn, quantityIn, crustCostIn,
-                     ingredientsTrim);
-               itemList[itemCount] = p;
-               itemCount++;
                break;
 
             case 'K':
-               nameIn = elements[1];
-               flavorIn = elements[2];
-               quantityIn = Integer.parseInt(elements[3]);
-               layersIn = Integer.parseInt(elements[4]);
-               j = 0;
-               for (int i = 0; i < elements.length - 5; i++) {
-                  ingredients[i] = elements[i + 5];
-                  j++;
+               try {
+                  nameIn = elements[1];
+                  flavorIn = elements[2];
+                  quantityIn = Integer.parseInt(elements[3]);
+                  layersIn = Integer.parseInt(elements[4]);
+                  j = 0;
+                  for (int i = 0; i < elements.length - 5; i++) {
+                     ingredients[i] = elements[i + 5];
+                     j++;
+                  }
+                  ingredientsTrim = Arrays.copyOf(ingredients, j);
+                  Cake k = new Cake(nameIn, flavorIn, quantityIn, layersIn,
+                        ingredientsTrim);
+                  itemList[itemCount] = k;
+                  itemCount++;
+               } catch (NumberFormatException e) {
+                  String result = "*** " + e + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
+               } catch (NoSuchElementException e) {
+                  String result = "*** " + e + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
+               } catch (ArrayIndexOutOfBoundsException e) {
+                  NoSuchElementException r = new NoSuchElementException();
+                  String result = "*** " + r + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
                }
-               ingredientsTrim = Arrays.copyOf(ingredients, j);
-               Cake k = new Cake(nameIn, flavorIn, quantityIn, layersIn,
-                     ingredientsTrim);
-               itemList[itemCount] = k;
-               itemCount++;
                break;
 
             case 'W':
-               nameIn = elements[1];
-               flavorIn = elements[2];
-               quantityIn = Integer.parseInt(elements[3]);
-               layersIn = Integer.parseInt(elements[4]);
-               tiersIn = Integer.parseInt(elements[5]);
-               j = 0;
-               for (int i = 0; i < elements.length - 6; i++) {
-                  ingredients[i] = elements[i + 6];
-                  j++;
+               try {
+                  nameIn = elements[1];
+                  flavorIn = elements[2];
+                  quantityIn = Integer.parseInt(elements[3]);
+                  layersIn = Integer.parseInt(elements[4]);
+                  tiersIn = Integer.parseInt(elements[5]);
+                  j = 0;
+                  for (int i = 0; i < elements.length - 6; i++) {
+                     ingredients[i] = elements[i + 6];
+                     j++;
+                  }
+                  ingredientsTrim = Arrays.copyOf(ingredients, j);
+                  WeddingCake w = new WeddingCake(nameIn, flavorIn, quantityIn,
+                        layersIn, tiersIn, ingredientsTrim);
+                  itemList[itemCount] = w;
+                  itemCount++;
+               } catch (NumberFormatException e) {
+                  String result = "*** " + e + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
+               } catch (NoSuchElementException e) {
+                  String result = "*** " + e + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
+               } catch (ArrayIndexOutOfBoundsException e) {
+                  NoSuchElementException r = new NoSuchElementException();
+                  String result = "*** " + r + " in:\n" + input;
+                  excludedRecords[excludedCount] = result;
+                  excludedCount++;
                }
-               ingredientsTrim = Arrays.copyOf(ingredients, j);
-               WeddingCake w = new WeddingCake(nameIn, flavorIn, quantityIn,
-                     layersIn, tiersIn, ingredientsTrim);
-               itemList[itemCount] = w;
-               itemCount++;
                break;
 
             default:
-               // TODO: 4/24/2017 this need to throw an InvalidCategoryException when a invalid type is encountered.
-               // FIXME: 4/24/2017 im pretty sure that this is wrong.
-               catch InvalidCategoryException e = new InvalidCategoryException(type);
+               InvalidCategoryException e = new 
+                  InvalidCategoryException(String.valueOf(type));
+               String result = "*** InvalidCategoryException: " + e 
+                  + "in:\n" + input;
+               excludedRecords[excludedCount] = result;
+               excludedCount++;
                break;
          }
       }
@@ -300,8 +357,7 @@ public class BakedItemList {
             + "Excluded Records Report\n"
             + "---------------------------------------\n\n";
       for (int i = 0; i < excludedCount; i++) {
-         result += "*** invalid category *** for line:\n"
-               + excludedRecords[i] + "\n";
+         result += excludedRecords[i] + "\n";
       }
       return result;
    }

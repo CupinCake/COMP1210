@@ -155,10 +155,10 @@ public class BakedItemListTest {
    @Test
    public void readItemFile() throws Exception {
       BakedItemList b = new BakedItemList();
-      b.readItemFile("baked_item_data.csv");
+      b.readItemFile("baked_item_data2.csv");
       Assert.assertEquals("Auburn's Best Bakery", b.getListName());
       Assert.assertEquals(6, b.getItemCount());
-      Assert.assertEquals(2, b.getExcludedCount());
+      Assert.assertEquals(5, b.getExcludedCount());
    }
 
    /**
@@ -168,7 +168,7 @@ public class BakedItemListTest {
    @Test
    public void generateReport() throws Exception {
       BakedItemList b = new BakedItemList();
-      b.readItemFile("baked_item_data.csv");
+      b.readItemFile("baked_item_data2.csv");
       String result = "---------------------------------------\n"
             + "Report for Auburn's Best Bakery\n"
             + "---------------------------------------\n"
@@ -215,7 +215,7 @@ public class BakedItemListTest {
    @Test
    public void generateReportByClass() throws Exception {
       BakedItemList b = new BakedItemList();
-      b.readItemFile("baked_item_data.csv");
+      b.readItemFile("baked_item_data2.csv");
       String result = "---------------------------------------\n"
             + "Report for Auburn's Best Bakery (by Class)\n"
             + "---------------------------------------\n"
@@ -261,7 +261,7 @@ public class BakedItemListTest {
    @Test
    public void generateReportByPrice() throws Exception {
       BakedItemList b = new BakedItemList();
-      b.readItemFile("baked_item_data.csv");
+      b.readItemFile("baked_item_data2.csv");
       String result = "---------------------------------------\n"
             + "Report for Auburn's Best Bakery (by Price)\n"
             + "---------------------------------------\n"
@@ -308,7 +308,7 @@ public class BakedItemListTest {
    @Test
    public void generateReportByFlavor() throws Exception {
       BakedItemList b = new BakedItemList();
-      b.readItemFile("baked_item_data.csv");
+      b.readItemFile("baked_item_data2.csv");
       String result = "---------------------------------------\n"
             + "Report for Auburn's Best Bakery (by Flavor)\n"
             + "---------------------------------------\n"
@@ -355,17 +355,29 @@ public class BakedItemListTest {
    @Test
    public void generateExcludedRecordsReport() throws Exception {
       BakedItemList b = new BakedItemList();
-      b.readItemFile("baked_item_data.csv");
+      b.readItemFile("baked_item_data2.csv");
       String result = "---------------------------------------\n"
             + "Excluded Records Report\n"
             + "---------------------------------------\n"
             + "\n"
-            + "*** invalid category *** for line:\n"
+            + "*** InvalidCategoryException: InvalidCategoryException: For "
+            + "category: \"D\"in:\n"
             + "D,Chips Delight,Chocolate Chip,12,flour,sugar,dark chocolate "
             + "chips,butter,baking soda,salt\n"
-            + "*** invalid category *** for line:\n"
+            + "*** java.lang.NumberFormatException: For input string: \"1.0\" "
+            + "in:\n"
+            + "P,Daily Special,Pecan,1.0,0,flour,sugar,pecans,dark corn syrup,"
+            + "butter,baking soda,salt\n"
+            + "*** InvalidCategoryException: InvalidCategoryException: For "
+            + "category: \"R\"in:\n"
             + "R,Weekly Special,Apple,1,0,flour,sugar,apple,cinnamon,butter,"
-            + "baking soda,salt\n";
+            + "baking soda,salt\n"
+            + "*** java.lang.NumberFormatException: For input string: \"two\" "
+            + "in:\n"
+            + "K,2-Layer,Chocolate,1,two,flour,sugar,cocoa powder,eggs,butter,"
+            + "baking soda,baking powder,salt\n"
+            + "*** java.util.NoSuchElementException in:\n"
+            + "W,3-Layer/3-Tier,Buttermilk,1,3\n";
       Assert.assertEquals(result, b.generateExcludedRecordsReport());
    }
 }

@@ -24,7 +24,7 @@ public class FlavorComparatorTest {
    @Test
    public void compare() throws Exception {
       BakedItemList b = new BakedItemList();
-      b.readItemFile("baked_item_data.csv");
+      b.readItemFile("baked_item_data2.csv");
       Assert.assertEquals("---------------------------------------\n"
             + "Report for Auburn's Best Bakery (by Flavor)\n"
             + "---------------------------------------\n\n"
