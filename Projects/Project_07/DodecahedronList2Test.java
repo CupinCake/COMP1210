@@ -218,7 +218,6 @@ public class DodecahedronList2Test {
     *
     * @throws IOException thows exception bc it might not fine a file
     */
-   // FIXME: 3/27/2017 fuck this.
    @Test
    public void readFileTest() throws IOException {
       DodecahedronList2 dodList2 = new DodecahedronList2("test list", null, 0);

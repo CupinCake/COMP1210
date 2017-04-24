@@ -151,20 +151,27 @@ public class BakedItemList {
 
          switch (type) {
             case 'C':
-               nameIn = elements[1];
-               flavorIn = elements[2];
-               quantityIn = Integer.parseInt(elements[3]);
-               j = 0;
-               for (int i = 0; i < elements.length - 4; i++) {
-                  ingredients[i] = elements[i + 4];
-                  j++;
+               // TODO: 4/24/2017 this is roughly what happens
+               try {
+                  nameIn = elements[1];
+                  flavorIn = elements[2];
+                  quantityIn = Integer.parseInt(elements[3]);
+                  j = 0;
+                  for (int i = 0; i < elements.length - 4; i++) {
+                     ingredients[i] = elements[i + 4];
+                     j++;
+                  }
+                  ingredientsTrim = Arrays.copyOf(ingredients, j);
+                  Cookie c = new Cookie(nameIn, flavorIn, quantityIn,
+                           ingredientsTrim);
+                  itemList[itemCount] = c;
+                  itemCount++;
+                  break;
+               } catch (NumberFormatException e) {
+                  "*** " + e + " in:\n" + input;
+               } catch (NoSuchElementException e) {
+                  "*** " + e + " in:\n" + input;
                }
-               ingredientsTrim = Arrays.copyOf(ingredients, j);
-               Cookie c = new Cookie(nameIn, flavorIn, quantityIn,
-                     ingredientsTrim);
-               itemList[itemCount] = c;
-               itemCount++;
-               break;
 
             case 'P':
                nameIn = elements[1];
@@ -219,8 +226,9 @@ public class BakedItemList {
                break;
 
             default:
-               excludedRecords[excludedCount] = input;
-               excludedCount++;
+               // TODO: 4/24/2017 this need to throw an InvalidCategoryException when a invalid type is encountered.
+               // FIXME: 4/24/2017 im pretty sure that this is wrong.
+               catch InvalidCategoryException e = new InvalidCategoryException(type);
                break;
          }
       }
