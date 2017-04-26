@@ -282,8 +282,8 @@ public class BakedItemList {
             default:
                InvalidCategoryException e = new 
                   InvalidCategoryException(String.valueOf(type));
-               String result = "*** InvalidCategoryException: " + e 
-                  + "in:\n" + input;
+               String result = "*** " + e
+                  + " in:\n" + input;
                excludedRecords[excludedCount] = result;
                excludedCount++;
                break;
